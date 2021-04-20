@@ -9,8 +9,8 @@ CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../include/GLFW/glfw3.h
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../include/KHR/khrplatform.h
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../include/glad/glad.h
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../Initiation.cpp
+CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../header/Texture.h
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../header/mainheader.h
-CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../header/stb_image.h
 
 CMakeFiles/GLTexture.dir/MoveFunc.cpp.obj: ../include/GL/freeglut_std.h
 CMakeFiles/GLTexture.dir/MoveFunc.cpp.obj: ../include/GL/glut.h
@@ -21,6 +21,12 @@ CMakeFiles/GLTexture.dir/Shader.cpp.obj: ../include/KHR/khrplatform.h
 CMakeFiles/GLTexture.dir/Shader.cpp.obj: ../include/glad/glad.h
 CMakeFiles/GLTexture.dir/Shader.cpp.obj: ../Shader.cpp
 CMakeFiles/GLTexture.dir/Shader.cpp.obj: ../header/Shader.h
+
+CMakeFiles/GLTexture.dir/Texture.cpp.obj: ../include/KHR/khrplatform.h
+CMakeFiles/GLTexture.dir/Texture.cpp.obj: ../include/glad/glad.h
+CMakeFiles/GLTexture.dir/Texture.cpp.obj: ../Texture.cpp
+CMakeFiles/GLTexture.dir/Texture.cpp.obj: ../header/Texture.h
+CMakeFiles/GLTexture.dir/Texture.cpp.obj: ../header/stb_image.h
 
 CMakeFiles/GLTexture.dir/lodepng.cpp.obj: ../lodepng.cpp
 CMakeFiles/GLTexture.dir/lodepng.cpp.obj: ../lodepng.h
@@ -230,6 +236,8 @@ CMakeFiles/GLTexture.dir/main.cpp.obj: ../glm/vec3.hpp
 CMakeFiles/GLTexture.dir/main.cpp.obj: ../glm/vec4.hpp
 CMakeFiles/GLTexture.dir/main.cpp.obj: ../glm/vector_relational.hpp
 CMakeFiles/GLTexture.dir/main.cpp.obj: ../header/Shader.h
+CMakeFiles/GLTexture.dir/main.cpp.obj: ../header/Texture.h
 CMakeFiles/GLTexture.dir/main.cpp.obj: ../header/mainheader.h
+CMakeFiles/GLTexture.dir/main.cpp.obj: ../header/stb_image.h
 CMakeFiles/GLTexture.dir/main.cpp.obj: ../main.cpp
 

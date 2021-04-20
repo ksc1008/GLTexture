@@ -8,7 +8,7 @@ link_directories(lib)
 set(CMAKE_CXX_STANDARD 14)
 
 
-add_executable(GLTexture main.cpp MoveFunc.cpp lodepng.cpp lodepng.h glad.c header/mainheader.h Initiation.cpp Shader.cpp header/Shader.h header/stb_image.h)
+add_executable(GLTexture main.cpp MoveFunc.cpp lodepng.cpp lodepng.h glad.c header/mainheader.h Initiation.cpp Shader.cpp header/Shader.h header/stb_image.h Texture.cpp Texture.h)
 target_link_libraries(GLTexture libopengl32.a  libfreeglut.a glu32.dll glfw3)
 
 cmake_minimum_required(VERSION 3.2 FATAL_ERROR)

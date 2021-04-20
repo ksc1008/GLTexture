@@ -1,11 +1,11 @@
 #include "header/mainheader.h"
-#include "header/stb_image.h"
-
+#include "header/Texture.h"
 unsigned int vertexShader;
 unsigned int fragmentShader;
 unsigned int shaderProgram;
-unsigned int texture0;
-unsigned int texture1;
+
+Texture texture0 = Texture("Dirt.png");;
+Texture texture1 = Texture("awesomeface.png", GL_RGBA);
 
 unsigned int triangleElementBufferObject;
 unsigned int triangleBufferArray;
@@ -65,37 +65,8 @@ void CreateUniVertices(int num){
 }
 
 void InitTexture(){
-    stbi__vertically_flip_on_load =true;
-    unsigned char* data = stbi_load("Dirt.png",&width,&height,&nrChannels,0);
-    if(!data){
-        std::cout<<"No data\n";
-    }
-    glGenTextures(1,&texture0);
-    glBindTexture(GL_TEXTURE_2D, texture0);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-    glTexImage2D(GL_TEXTURE_2D,0,GL_RGB,width,height,0,GL_RGB,GL_UNSIGNED_BYTE,data);
-    glGenerateMipmap(GL_TEXTURE_2D);
-    stbi_image_free(data);
-
-    data = stbi_load("awesomeface.png",&width,&height,&nrChannels,0);
-    if(!data){
-        std::cout<<"No data\n";
-    }
-    glGenTextures(1,&texture1);
-    glBindTexture(GL_TEXTURE_2D,texture1);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-    glTexImage2D(GL_TEXTURE_2D,0,GL_RGBA,width,height,0,GL_RGBA,GL_UNSIGNED_BYTE,data);
-    glGenerateMipmap(GL_TEXTURE_2D);
-    stbi_image_free(data);
-
+    texture0.LoadTexture();
+    texture1.LoadTexture();
 }
 
 void InitObject(){

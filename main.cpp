@@ -1,6 +1,8 @@
-#include <cmath>
+#define STB_IMAGE_IMPLEMENTATION
+
 #include "header/mainheader.h"
 #include "header/Shader.h"
+#include "header/stb_image.h"
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 #include "glm/gtc/type_ptr.hpp"
@@ -37,9 +39,9 @@ void MainDisplay(){
 
 
     glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, texture0);
+    texture0.Bind();
     glActiveTexture(GL_TEXTURE1);
-    glBindTexture(GL_TEXTURE_2D, texture1);
+    texture1.Bind();
     glBindVertexArray(triangleBufferObject);
     glDrawElements(GL_TRIANGLES, 6,GL_UNSIGNED_INT,0);
     glBindVertexArray(0);
@@ -54,6 +56,7 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 
 
 int main(int argc, char**argv) {
+    stbi__vertically_flip_on_load =true;
     InitGlfw();
     window = glfwCreateWindow(800,600,"HAHA",NULL,NULL);
     if(window == NULL){

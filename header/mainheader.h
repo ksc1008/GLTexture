@@ -6,6 +6,7 @@
 #include <iostream>
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
+#include "Texture.h"
 
 void InitGlfw();
 void InitLight();
@@ -27,8 +28,8 @@ extern unsigned int shaderProgram;
 
 extern unsigned int triangleBufferArray;
 extern unsigned int triangleBufferObject;
-extern unsigned int texture0;
-extern unsigned int texture1;
+extern Texture texture0;
+extern Texture texture1;
 
 
 void InitObject();

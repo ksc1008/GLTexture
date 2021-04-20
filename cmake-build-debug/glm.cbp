@@ -101,6 +101,12 @@
 		<Unit filename="C:/GLTexture/Shader.cpp">
 			<Option target="GLTexture"/>
 		</Unit>
+		<Unit filename="C:/GLTexture/Texture.cpp">
+			<Option target="GLTexture"/>
+		</Unit>
+		<Unit filename="C:/GLTexture/Texture.h">
+			<Option target="GLTexture"/>
+		</Unit>
 		<Unit filename="C:/GLTexture/glad.c">
 			<Option target="GLTexture"/>
 		</Unit>

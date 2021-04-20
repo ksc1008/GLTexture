@@ -234,6 +234,33 @@ Shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Shader.cpp.s
 .PHONY : Shader.cpp.s
 
+Texture.obj: Texture.cpp.obj
+
+.PHONY : Texture.obj
+
+# target to build an object file
+Texture.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Texture.cpp.obj
+.PHONY : Texture.cpp.obj
+
+Texture.i: Texture.cpp.i
+
+.PHONY : Texture.i
+
+# target to preprocess a source file
+Texture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Texture.cpp.i
+.PHONY : Texture.cpp.i
+
+Texture.s: Texture.cpp.s
+
+.PHONY : Texture.s
+
+# target to generate assembly for a file
+Texture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Texture.cpp.s
+.PHONY : Texture.cpp.s
+
 glad.obj: glad.c.obj
 
 .PHONY : glad.obj
@@ -334,6 +361,9 @@ help:
 	@echo ... Shader.obj
 	@echo ... Shader.i
 	@echo ... Shader.s
+	@echo ... Texture.obj
+	@echo ... Texture.i
+	@echo ... Texture.s
 	@echo ... glad.obj
 	@echo ... glad.i
 	@echo ... glad.s
