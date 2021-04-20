@@ -12,6 +12,7 @@ GLFWwindow* window;
 unsigned int colorid;
 float green;
 Shader* myShader = nullptr;
+Shader* ShaderNoColor = nullptr;
 
 glm::mat4 ScaleAndTranslate(float translateX, float translateY, float translateZ, float scaleX = 1, float scaleY = 1, float scaleZ = 1){
     return glm::mat4(scaleX,0,0,translateX,
@@ -31,10 +32,10 @@ void MainDisplay(){
 
     glClearColor(.2f,0,0,1);
     glClear(GL_COLOR_BUFFER_BIT);
-    myShader->use();
-    myShader->setInt("texture1",0);
-    myShader->setInt("texture2",1);
-    unsigned int transformLoc = glGetUniformLocation(myShader->ID, "transform");
+    ShaderNoColor->use();
+    ShaderNoColor->setInt("texture1",0);
+    ShaderNoColor->setInt("texture2",1);
+    unsigned int transformLoc = glGetUniformLocation(ShaderNoColor->ID, "transform");
     glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans));
 
 
@@ -42,8 +43,11 @@ void MainDisplay(){
     texture0.Bind();
     glActiveTexture(GL_TEXTURE1);
     texture1.Bind();
-    glBindVertexArray(triangleBufferObject);
-    glDrawElements(GL_TRIANGLES, 6,GL_UNSIGNED_INT,0);
+    //glBindVertexArray(triangleBufferObject);
+    //glDrawElements(GL_TRIANGLES, 6,GL_UNSIGNED_INT,0);
+    //glBindVertexArray(0);
+    glBindVertexArray(cubeBufferObject);
+    glDrawArrays(GL_TRIANGLES,0,36);
     glBindVertexArray(0);
     glfwSwapBuffers(window);
     glfwPollEvents();
@@ -71,7 +75,8 @@ int main(int argc, char**argv) {
         return -1;
     }
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-    myShader = new Shader("vertexShader.glsl","fragmentShader.glsl");
+    myShader = new Shader("shaders/vertexShader.glsl","shaders/fragmentShader.glsl");
+    ShaderNoColor = new Shader("shaders/vertexShaderNoColor.glsl","shaders/fragmentShaderNoColor.glsl");
     InitTexture();
     InitObject();
     colorid = glGetUniformLocation(shaderProgram,"ourColor");

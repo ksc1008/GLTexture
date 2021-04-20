@@ -31,6 +31,9 @@ extern unsigned int triangleBufferObject;
 extern Texture texture0;
 extern Texture texture1;
 
+extern unsigned int cubeBufferArray;
+extern unsigned int cubeBufferObject;
+
 
 void InitObject();
 void InitTexture();
