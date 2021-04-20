@@ -9,7 +9,6 @@
 //#include "GL/glu.h"
 int id;
 GLFWwindow* window;
-unsigned int colorid;
 float green;
 Shader* myShader = nullptr;
 Shader* ShaderNoColor = nullptr;
@@ -31,8 +30,7 @@ void MainDisplay(){
     trans *= ScaleAndTranslate(-.2+timeValue,0,0,.5,.5,.5);
 
     glClearColor(.2f,0,0,1);
-    glClear(GL_COLOR_BUFFER_BIT);
-    ShaderNoColor->use();
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     ShaderNoColor->setInt("texture1",0);
     ShaderNoColor->setInt("texture2",1);
     unsigned int transformLoc = glGetUniformLocation(ShaderNoColor->ID, "transform");
@@ -46,6 +44,7 @@ void MainDisplay(){
     //glBindVertexArray(triangleBufferObject);
     //glDrawElements(GL_TRIANGLES, 6,GL_UNSIGNED_INT,0);
     //glBindVertexArray(0);
+    ShaderNoColor->use();
     glBindVertexArray(cubeBufferObject);
     glDrawArrays(GL_TRIANGLES,0,36);
     glBindVertexArray(0);
@@ -79,7 +78,7 @@ int main(int argc, char**argv) {
     ShaderNoColor = new Shader("shaders/vertexShaderNoColor.glsl","shaders/fragmentShaderNoColor.glsl");
     InitTexture();
     InitObject();
-    colorid = glGetUniformLocation(shaderProgram,"ourColor");
+    glEnable(GL_DEPTH_TEST);
     glViewport(0, 0, 800, 600);
     while(!glfwWindowShouldClose(window))
     {
