@@ -1464,6 +1464,12 @@ C:/GLTexture/glm/detail/setup.hpp
 detail/func_vector_relational.inl
 C:/GLTexture/glm/detail/func_vector_relational.inl
 
+C:/GLTexture/header/MVP.h
+../glm/glm.hpp
+C:/GLTexture/glm/glm.hpp
+../glm/gtc/matrix_transform.hpp
+C:/GLTexture/glm/gtc/matrix_transform.hpp
+
 C:/GLTexture/header/Shader.h
 glad/glad.h
 -
@@ -1527,6 +1533,8 @@ arm_neon.h
 -
 
 C:/GLTexture/main.cpp
+math.h
+C:/GLTexture/math.h
 header/mainheader.h
 C:/GLTexture/header/mainheader.h
 header/Shader.h
@@ -1539,4 +1547,6 @@ glm/gtc/matrix_transform.hpp
 C:/GLTexture/glm/gtc/matrix_transform.hpp
 glm/gtc/type_ptr.hpp
 C:/GLTexture/glm/gtc/type_ptr.hpp
+header/MVP.h
+C:/GLTexture/header/MVP.h
 

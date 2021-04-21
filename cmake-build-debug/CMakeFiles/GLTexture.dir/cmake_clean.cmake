@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/GLTexture.dir/Initiation.cpp.obj"
+  "CMakeFiles/GLTexture.dir/MVP.cpp.obj"
   "CMakeFiles/GLTexture.dir/MoveFunc.cpp.obj"
   "CMakeFiles/GLTexture.dir/Shader.cpp.obj"
   "CMakeFiles/GLTexture.dir/Texture.cpp.obj"

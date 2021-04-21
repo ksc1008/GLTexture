@@ -180,6 +180,33 @@ Initiation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Initiation.cpp.s
 .PHONY : Initiation.cpp.s
 
+MVP.obj: MVP.cpp.obj
+
+.PHONY : MVP.obj
+
+# target to build an object file
+MVP.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/MVP.cpp.obj
+.PHONY : MVP.cpp.obj
+
+MVP.i: MVP.cpp.i
+
+.PHONY : MVP.i
+
+# target to preprocess a source file
+MVP.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/MVP.cpp.i
+.PHONY : MVP.cpp.i
+
+MVP.s: MVP.cpp.s
+
+.PHONY : MVP.s
+
+# target to generate assembly for a file
+MVP.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/MVP.cpp.s
+.PHONY : MVP.cpp.s
+
 MoveFunc.obj: MoveFunc.cpp.obj
 
 .PHONY : MoveFunc.obj
@@ -355,6 +382,9 @@ help:
 	@echo ... Initiation.obj
 	@echo ... Initiation.i
 	@echo ... Initiation.s
+	@echo ... MVP.obj
+	@echo ... MVP.i
+	@echo ... MVP.s
 	@echo ... MoveFunc.obj
 	@echo ... MoveFunc.i
 	@echo ... MoveFunc.s

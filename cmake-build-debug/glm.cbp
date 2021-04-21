@@ -95,6 +95,9 @@
 		<Unit filename="C:/GLTexture/Initiation.cpp">
 			<Option target="GLTexture"/>
 		</Unit>
+		<Unit filename="C:/GLTexture/MVP.cpp">
+			<Option target="GLTexture"/>
+		</Unit>
 		<Unit filename="C:/GLTexture/MoveFunc.cpp">
 			<Option target="GLTexture"/>
 		</Unit>
@@ -104,13 +107,16 @@
 		<Unit filename="C:/GLTexture/Texture.cpp">
 			<Option target="GLTexture"/>
 		</Unit>
-		<Unit filename="C:/GLTexture/Texture.h">
-			<Option target="GLTexture"/>
-		</Unit>
 		<Unit filename="C:/GLTexture/glad.c">
 			<Option target="GLTexture"/>
 		</Unit>
+		<Unit filename="C:/GLTexture/header/MVP.h">
+			<Option target="GLTexture"/>
+		</Unit>
 		<Unit filename="C:/GLTexture/header/Shader.h">
+			<Option target="GLTexture"/>
+		</Unit>
+		<Unit filename="C:/GLTexture/header/Texture.h">
 			<Option target="GLTexture"/>
 		</Unit>
 		<Unit filename="C:/GLTexture/header/mainheader.h">
