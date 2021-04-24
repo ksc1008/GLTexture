@@ -207,33 +207,6 @@ MVP.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/MVP.cpp.s
 .PHONY : MVP.cpp.s
 
-MoveFunc.obj: MoveFunc.cpp.obj
-
-.PHONY : MoveFunc.obj
-
-# target to build an object file
-MoveFunc.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/MoveFunc.cpp.obj
-.PHONY : MoveFunc.cpp.obj
-
-MoveFunc.i: MoveFunc.cpp.i
-
-.PHONY : MoveFunc.i
-
-# target to preprocess a source file
-MoveFunc.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/MoveFunc.cpp.i
-.PHONY : MoveFunc.cpp.i
-
-MoveFunc.s: MoveFunc.cpp.s
-
-.PHONY : MoveFunc.s
-
-# target to generate assembly for a file
-MoveFunc.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/MoveFunc.cpp.s
-.PHONY : MoveFunc.cpp.s
-
 Shader.obj: Shader.cpp.obj
 
 .PHONY : Shader.obj
@@ -315,33 +288,6 @@ glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/glad.c.s
 .PHONY : glad.c.s
 
-lodepng.obj: lodepng.cpp.obj
-
-.PHONY : lodepng.obj
-
-# target to build an object file
-lodepng.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/lodepng.cpp.obj
-.PHONY : lodepng.cpp.obj
-
-lodepng.i: lodepng.cpp.i
-
-.PHONY : lodepng.i
-
-# target to preprocess a source file
-lodepng.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/lodepng.cpp.i
-.PHONY : lodepng.cpp.i
-
-lodepng.s: lodepng.cpp.s
-
-.PHONY : lodepng.s
-
-# target to generate assembly for a file
-lodepng.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/lodepng.cpp.s
-.PHONY : lodepng.cpp.s
-
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -385,9 +331,6 @@ help:
 	@echo ... MVP.obj
 	@echo ... MVP.i
 	@echo ... MVP.s
-	@echo ... MoveFunc.obj
-	@echo ... MoveFunc.i
-	@echo ... MoveFunc.s
 	@echo ... Shader.obj
 	@echo ... Shader.i
 	@echo ... Shader.s
@@ -397,9 +340,6 @@ help:
 	@echo ... glad.obj
 	@echo ... glad.i
 	@echo ... glad.s
-	@echo ... lodepng.obj
-	@echo ... lodepng.i
-	@echo ... lodepng.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

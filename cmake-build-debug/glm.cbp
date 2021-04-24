@@ -98,9 +98,6 @@
 		<Unit filename="C:/GLTexture/MVP.cpp">
 			<Option target="GLTexture"/>
 		</Unit>
-		<Unit filename="C:/GLTexture/MoveFunc.cpp">
-			<Option target="GLTexture"/>
-		</Unit>
 		<Unit filename="C:/GLTexture/Shader.cpp">
 			<Option target="GLTexture"/>
 		</Unit>
@@ -123,12 +120,6 @@
 			<Option target="GLTexture"/>
 		</Unit>
 		<Unit filename="C:/GLTexture/header/stb_image.h">
-			<Option target="GLTexture"/>
-		</Unit>
-		<Unit filename="C:/GLTexture/lodepng.cpp">
-			<Option target="GLTexture"/>
-		</Unit>
-		<Unit filename="C:/GLTexture/lodepng.h">
 			<Option target="GLTexture"/>
 		</Unit>
 		<Unit filename="C:/GLTexture/main.cpp">

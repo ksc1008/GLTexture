@@ -8,12 +8,12 @@
 #include "glm/gtc/matrix_transform.hpp"
 #include "glm/gtc/type_ptr.hpp"
 #include "header/MVP.h"
-//#include "GL/glu.h"
 int id;
 GLFWwindow* window;
 float green;
-Shader* myShader = nullptr;
 Shader* ShaderNoColor = nullptr;
+Shader* LightingShader = nullptr;
+Shader* LightShader = nullptr;
 
 MVP mvp;
 
@@ -21,33 +21,37 @@ void MainDisplay(){
 
     float timeValue = glfwGetTime()*2;
 
-    glm::mat4 trans = glm::identity<glm::mat4>();
-    trans = glm::translate(trans,glm::vec3(timeValue*0.1,0,0));
-    trans = glm::rotate(trans,timeValue*3,glm::vec3(0.5,0.5,1));
-    float size = fmax(0,1-timeValue*0.1);
-    trans= glm::scale(trans,glm::vec3(size,size,size));
-    mvp.SetModel(trans);
+    auto view = glm::lookAt(glm::vec3(0,2,-3),glm::vec3(0,0,2),glm::vec3(0,1,0));
 
+    mvp.SetView(view);
+    mvp.SetModel(glm::identity<glm::mat4>());
 
     glClearColor(.2f,0,0,1);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    ShaderNoColor->setInt("texture1",0);
-    ShaderNoColor->setInt("texture2",1);
-    unsigned int transformLoc = glGetUniformLocation(ShaderNoColor->ID, "transform");
+    LightingShader->use();
+    unsigned int transformLoc = glGetUniformLocation(LightingShader->ID, "transform");
     glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(mvp.GetMVP()));
-
-
-    glActiveTexture(GL_TEXTURE0);
-    texture0.Bind();
-    glActiveTexture(GL_TEXTURE1);
-    texture1.Bind();
-    //glBindVertexArray(triangleBufferObject);
-    //glDrawElements(GL_TRIANGLES, 6,GL_UNSIGNED_INT,0);
-    //glBindVertexArray(0);
-    ShaderNoColor->use();
+    LightingShader->setVec3("objectColor",.3,.5,.2);
+    LightingShader->setVec3("lightColor",1,1,1);
+;
     glBindVertexArray(cubeBufferObject);
     glDrawArrays(GL_TRIANGLES,0,36);
+
+    glm::mat4 trans = glm::identity<glm::mat4>();
+    glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
+    trans = glm::translate(trans,lightPos);
+    trans = glm::scale(trans,glm::vec3(.2));
+    mvp.SetModel(trans);
+    LightShader->use();
+    transformLoc = glGetUniformLocation(LightShader->ID, "transform");
+    glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(mvp.GetMVP()));
+    glBindVertexArray(lightSourceVAO);
+    glDrawArrays(GL_TRIANGLES,0,36);
     glBindVertexArray(0);
+
+
+
+
     glfwSwapBuffers(window);
     glfwPollEvents();
 }
@@ -74,8 +78,7 @@ int main(int argc, char**argv) {
         return -1;
     }
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-    myShader = new Shader("shaders/vertexShader.glsl","shaders/fragmentShader.glsl");
-    ShaderNoColor = new Shader("shaders/vertexShaderNoColor.glsl","shaders/fragmentShaderNoColor.glsl");
+    InitShader();
     InitTexture();
     InitObject();
     glEnable(GL_DEPTH_TEST);
