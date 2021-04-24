@@ -16,10 +16,8 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/GLTexture/Initiation.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/Initiation.cpp.obj"
   "C:/GLTexture/MVP.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/MVP.cpp.obj"
-  "C:/GLTexture/MoveFunc.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/MoveFunc.cpp.obj"
   "C:/GLTexture/Shader.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/Shader.cpp.obj"
   "C:/GLTexture/Texture.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/Texture.cpp.obj"
-  "C:/GLTexture/lodepng.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/lodepng.cpp.obj"
   "C:/GLTexture/main.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

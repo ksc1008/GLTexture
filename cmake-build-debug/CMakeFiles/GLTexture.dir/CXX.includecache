@@ -1499,6 +1499,8 @@ GLFW/glfw3.h
 C:/GLTexture/header/GLFW/glfw3.h
 Texture.h
 C:/GLTexture/header/Texture.h
+Shader.h
+C:/GLTexture/header/Shader.h
 
 C:/GLTexture/header/stb_image.h
 stb_image.h

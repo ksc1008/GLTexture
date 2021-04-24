@@ -90,38 +90,10 @@ CMakeFiles/GLTexture.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/main.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\main.cpp -o CMakeFiles\GLTexture.dir\main.cpp.s
 
-CMakeFiles/GLTexture.dir/MoveFunc.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
-CMakeFiles/GLTexture.dir/MoveFunc.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
-CMakeFiles/GLTexture.dir/MoveFunc.cpp.obj: ../MoveFunc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GLTexture.dir/MoveFunc.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\MoveFunc.cpp.obj -c C:\GLTexture\MoveFunc.cpp
-
-CMakeFiles/GLTexture.dir/MoveFunc.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GLTexture.dir/MoveFunc.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GLTexture\MoveFunc.cpp > CMakeFiles\GLTexture.dir\MoveFunc.cpp.i
-
-CMakeFiles/GLTexture.dir/MoveFunc.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/MoveFunc.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\MoveFunc.cpp -o CMakeFiles\GLTexture.dir\MoveFunc.cpp.s
-
-CMakeFiles/GLTexture.dir/lodepng.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
-CMakeFiles/GLTexture.dir/lodepng.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
-CMakeFiles/GLTexture.dir/lodepng.cpp.obj: ../lodepng.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GLTexture.dir/lodepng.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\lodepng.cpp.obj -c C:\GLTexture\lodepng.cpp
-
-CMakeFiles/GLTexture.dir/lodepng.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GLTexture.dir/lodepng.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GLTexture\lodepng.cpp > CMakeFiles\GLTexture.dir\lodepng.cpp.i
-
-CMakeFiles/GLTexture.dir/lodepng.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/lodepng.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\lodepng.cpp -o CMakeFiles\GLTexture.dir\lodepng.cpp.s
-
 CMakeFiles/GLTexture.dir/glad.c.obj: CMakeFiles/GLTexture.dir/flags.make
 CMakeFiles/GLTexture.dir/glad.c.obj: CMakeFiles/GLTexture.dir/includes_C.rsp
 CMakeFiles/GLTexture.dir/glad.c.obj: ../glad.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/GLTexture.dir/glad.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/GLTexture.dir/glad.c.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\GLTexture.dir\glad.c.obj   -c C:\GLTexture\glad.c
 
 CMakeFiles/GLTexture.dir/glad.c.i: cmake_force
@@ -135,7 +107,7 @@ CMakeFiles/GLTexture.dir/glad.c.s: cmake_force
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../Initiation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GLTexture.dir/Initiation.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GLTexture.dir/Initiation.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\Initiation.cpp.obj -c C:\GLTexture\Initiation.cpp
 
 CMakeFiles/GLTexture.dir/Initiation.cpp.i: cmake_force
@@ -149,7 +121,7 @@ CMakeFiles/GLTexture.dir/Initiation.cpp.s: cmake_force
 CMakeFiles/GLTexture.dir/Shader.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
 CMakeFiles/GLTexture.dir/Shader.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
 CMakeFiles/GLTexture.dir/Shader.cpp.obj: ../Shader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GLTexture.dir/Shader.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GLTexture.dir/Shader.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\Shader.cpp.obj -c C:\GLTexture\Shader.cpp
 
 CMakeFiles/GLTexture.dir/Shader.cpp.i: cmake_force
@@ -163,7 +135,7 @@ CMakeFiles/GLTexture.dir/Shader.cpp.s: cmake_force
 CMakeFiles/GLTexture.dir/Texture.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
 CMakeFiles/GLTexture.dir/Texture.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
 CMakeFiles/GLTexture.dir/Texture.cpp.obj: ../Texture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GLTexture.dir/Texture.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GLTexture.dir/Texture.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\Texture.cpp.obj -c C:\GLTexture\Texture.cpp
 
 CMakeFiles/GLTexture.dir/Texture.cpp.i: cmake_force
@@ -177,7 +149,7 @@ CMakeFiles/GLTexture.dir/Texture.cpp.s: cmake_force
 CMakeFiles/GLTexture.dir/MVP.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
 CMakeFiles/GLTexture.dir/MVP.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
 CMakeFiles/GLTexture.dir/MVP.cpp.obj: ../MVP.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/GLTexture.dir/MVP.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GLTexture.dir/MVP.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\MVP.cpp.obj -c C:\GLTexture\MVP.cpp
 
 CMakeFiles/GLTexture.dir/MVP.cpp.i: cmake_force
@@ -191,8 +163,6 @@ CMakeFiles/GLTexture.dir/MVP.cpp.s: cmake_force
 # Object files for target GLTexture
 GLTexture_OBJECTS = \
 "CMakeFiles/GLTexture.dir/main.cpp.obj" \
-"CMakeFiles/GLTexture.dir/MoveFunc.cpp.obj" \
-"CMakeFiles/GLTexture.dir/lodepng.cpp.obj" \
 "CMakeFiles/GLTexture.dir/glad.c.obj" \
 "CMakeFiles/GLTexture.dir/Initiation.cpp.obj" \
 "CMakeFiles/GLTexture.dir/Shader.cpp.obj" \
@@ -203,8 +173,6 @@ GLTexture_OBJECTS = \
 GLTexture_EXTERNAL_OBJECTS =
 
 GLTexture.exe: CMakeFiles/GLTexture.dir/main.cpp.obj
-GLTexture.exe: CMakeFiles/GLTexture.dir/MoveFunc.cpp.obj
-GLTexture.exe: CMakeFiles/GLTexture.dir/lodepng.cpp.obj
 GLTexture.exe: CMakeFiles/GLTexture.dir/glad.c.obj
 GLTexture.exe: CMakeFiles/GLTexture.dir/Initiation.cpp.obj
 GLTexture.exe: CMakeFiles/GLTexture.dir/Shader.cpp.obj
@@ -214,7 +182,7 @@ GLTexture.exe: CMakeFiles/GLTexture.dir/build.make
 GLTexture.exe: CMakeFiles/GLTexture.dir/linklibs.rsp
 GLTexture.exe: CMakeFiles/GLTexture.dir/objects1.rsp
 GLTexture.exe: CMakeFiles/GLTexture.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable GLTexture.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable GLTexture.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\GLTexture.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
