@@ -1465,6 +1465,8 @@ detail/func_vector_relational.inl
 C:/GLTexture/glm/detail/func_vector_relational.inl
 
 C:/GLTexture/header/MVP.h
+glad/glad.h
+-
 ../glm/glm.hpp
 C:/GLTexture/glm/glm.hpp
 ../glm/gtc/matrix_transform.hpp
@@ -1483,6 +1485,8 @@ sstream
 -
 iostream
 -
+../glm/glm.hpp
+C:/GLTexture/glm/glm.hpp
 
 C:/GLTexture/header/Texture.h
 glad/glad.h

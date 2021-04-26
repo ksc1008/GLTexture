@@ -1,5 +1,7 @@
 #ifndef GLM_MVP_H
 #define GLM_MVP_H
+
+#include <glad/glad.h>
 #include "../glm/glm.hpp"
 #include "../glm/gtc/matrix_transform.hpp"
 
@@ -22,6 +24,8 @@ public:
     glm::mat4 GetViewMat(){return View;}
     glm::mat4 GetProejctoinMat(){return Projection;}
     glm::mat4 GetMVP(){return Projection*View*Model;}
+
+    void SetVertexShaderTransform(unsigned int id);
 };
 
 
