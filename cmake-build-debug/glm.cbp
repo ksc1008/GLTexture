@@ -92,7 +92,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/GLTexture/Camera.cpp">
+			<Option target="GLTexture"/>
+		</Unit>
+		<Unit filename="C:/GLTexture/Camera.h">
+			<Option target="GLTexture"/>
+		</Unit>
 		<Unit filename="C:/GLTexture/Initiation.cpp">
+			<Option target="GLTexture"/>
+		</Unit>
+		<Unit filename="C:/GLTexture/Input.cpp">
 			<Option target="GLTexture"/>
 		</Unit>
 		<Unit filename="C:/GLTexture/MVP.cpp">

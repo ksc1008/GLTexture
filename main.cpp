@@ -1,5 +1,7 @@
 #define STB_IMAGE_IMPLEMENTATION
-
+#define WIN_WIDTH 1280
+#define WIN_HEIGHT 720
+#include "Camera.h"
 #include "math.h"
 #include "header/mainheader.h"
 #include "header/Shader.h"
@@ -8,26 +10,37 @@
 #include "glm/gtc/matrix_transform.hpp"
 #include "glm/gtc/type_ptr.hpp"
 #include "header/MVP.h"
+bool firstMouse = true;
+float lastX = WIN_WIDTH;
+float lastY = WIN_HEIGHT;
+
 int id;
 GLFWwindow* window;
 float green;
 Shader* ShaderNoColor = nullptr;
 Shader* LightingShader = nullptr;
 Shader* LightShader = nullptr;
+float Rot=0;
+float deltaTime = 0;
+float currentFrame = glfwGetTime();
+float lastFrame = glfwGetTime();
 
+Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
 MVP* mvp;
+MVP* mvpLight;
+
 
 void MainDisplay(){
 
     float timeValue = glfwGetTime()*2;
 
-    glm::vec3 lightPos(3, 1, 0);
+    glm::vec3 lightPos(0.5, 1, -2);
 
-    glm::vec3 viewPos = glm::vec3(2,2,-3);
-    auto view = glm::lookAt(viewPos,glm::vec3(0,0,0),glm::vec3(0,1,0));
 
-    mvp->SetView(view);
-    mvp->SetModel(glm::identity<glm::mat4>());
+
+    mvp->SetView(camera.GetViewMatrix());
+    mvpLight->SetView(camera.GetViewMatrix());
+    mvp->SetModel(glm::rotate(glm::identity<glm::mat4>(),Rot,glm::vec3(0,1,0)));
 
     glClearColor(.2f,0,0,1);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -36,7 +49,7 @@ void MainDisplay(){
     LightingShader->setVec3("objectColor",.3,.5,.2);
     LightingShader->setVec3("lightColor",1,1,1);
     LightingShader->setVec3("lightPos",lightPos);
-    LightingShader->setVec3("viewPos",glm::vec3(2,2,-3));
+    LightingShader->setVec3("viewPos",camera.Position);
 ;
     glBindVertexArray(cubeBufferObject);
     glDrawArrays(GL_TRIANGLES,0,36);
@@ -44,10 +57,10 @@ void MainDisplay(){
     glm::mat4 trans = glm::identity<glm::mat4>();
     trans = glm::translate(trans,lightPos);
     trans = glm::scale(trans,glm::vec3(.2));
-    mvp->SetModel(trans);
+    mvpLight->SetModel(trans);
     LightShader->use();
 
-    mvp->SetVertexShaderTransform(LightShader->ID);
+    mvpLight->SetVertexShaderTransform(LightShader->ID);
 
     glBindVertexArray(lightSourceVAO);
     glDrawArrays(GL_TRIANGLES,0,36);
@@ -60,6 +73,40 @@ void MainDisplay(){
     glfwPollEvents();
 }
 
+void processInput(GLFWwindow *window)
+{
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+        glfwSetWindowShouldClose(window, true);
+
+    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+        camera.ProcessKeyboard(FORWARD, deltaTime);
+    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+        camera.ProcessKeyboard(BACKWARD, deltaTime);
+    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+        camera.ProcessKeyboard(LEFT, deltaTime);
+    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+        camera.ProcessKeyboard(RIGHT, deltaTime);
+}
+
+// -------------------------------------------------------
+void mouse_callback(GLFWwindow* window, double xpos, double ypos)
+{
+    if (firstMouse)
+    {
+        lastX = xpos;
+        lastY = ypos;
+        firstMouse = false;
+    }
+
+    float xoffset = xpos - lastX;
+    float yoffset = lastY - ypos; // reversed since y-coordinates go from bottom to top
+
+    lastX = xpos;
+    lastY = ypos;
+
+    camera.ProcessMouseMovement(xoffset, yoffset);
+}
+
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
     glViewport(0, 0, width, height);
@@ -68,9 +115,10 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 
 int main(int argc, char**argv) {
     mvp = new MVP();
+    mvpLight = new MVP();
     stbi__vertically_flip_on_load =true;
     InitGlfw();
-    window = glfwCreateWindow(800,600,"HAHA",NULL,NULL);
+    window = glfwCreateWindow(WIN_WIDTH,WIN_HEIGHT,"HAHA",NULL,NULL);
     if(window == NULL){
         std::cout <<"OOPS"<<"\n";
         glfwTerminate();
@@ -83,17 +131,25 @@ int main(int argc, char**argv) {
         return -1;
     }
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    glfwSetCursorPosCallback(window, mouse_callback);
     InitShader();
     InitTexture();
     InitObject();
     glEnable(GL_DEPTH_TEST);
-    glViewport(0, 0, 800, 600);
-    mvp->SetPerspective(glm::radians(45.0f),4.0f/3.0f,0.1f,100.0f);
+    glViewport(0, 0, 1280, 720);
+    mvp->SetPerspective(glm::radians(45.0f),16.0f/9.0f,0.1f,100.0f);
+    mvpLight->SetPerspective(glm::radians(45.0f),16.0f/9.0f,0.1f,100.0f);
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
     glm::mat4 view = glm::mat4(1.0f);
     view = glm::translate(view,glm::vec3(0.0f,0.0f,-3.0f));
     mvp->SetView(view);
     while(!glfwWindowShouldClose(window))
     {
+        currentFrame = glfwGetTime();
+        deltaTime = currentFrame - lastFrame;
+        lastFrame = currentFrame;
+        processInput(window);
+        InputEvent( window);
         MainDisplay();
     }
     glfwTerminate();

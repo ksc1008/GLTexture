@@ -13,11 +13,13 @@ void InitGlfw();
 void InitLight();
 extern Texture texture0;
 extern Texture texture1;
-
+extern float deltaTime;
+extern float Rot;
 extern unsigned int cubeBufferArray;
 extern unsigned int cubeBufferObject;
 extern unsigned int lightSourceVAO;
 
+extern void InputEvent(GLFWwindow* window);
 void InitShader();
 void InitObject();
 void InitTexture();

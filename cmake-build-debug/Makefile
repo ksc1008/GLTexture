@@ -152,6 +152,33 @@ GLTexture/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/build
 .PHONY : GLTexture/fast
 
+Camera.obj: Camera.cpp.obj
+
+.PHONY : Camera.obj
+
+# target to build an object file
+Camera.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Camera.cpp.obj
+.PHONY : Camera.cpp.obj
+
+Camera.i: Camera.cpp.i
+
+.PHONY : Camera.i
+
+# target to preprocess a source file
+Camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Camera.cpp.i
+.PHONY : Camera.cpp.i
+
+Camera.s: Camera.cpp.s
+
+.PHONY : Camera.s
+
+# target to generate assembly for a file
+Camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Camera.cpp.s
+.PHONY : Camera.cpp.s
+
 Initiation.obj: Initiation.cpp.obj
 
 .PHONY : Initiation.obj
@@ -178,6 +205,33 @@ Initiation.s: Initiation.cpp.s
 Initiation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Initiation.cpp.s
 .PHONY : Initiation.cpp.s
+
+Input.obj: Input.cpp.obj
+
+.PHONY : Input.obj
+
+# target to build an object file
+Input.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Input.cpp.obj
+.PHONY : Input.cpp.obj
+
+Input.i: Input.cpp.i
+
+.PHONY : Input.i
+
+# target to preprocess a source file
+Input.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Input.cpp.i
+.PHONY : Input.cpp.i
+
+Input.s: Input.cpp.s
+
+.PHONY : Input.s
+
+# target to generate assembly for a file
+Input.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Input.cpp.s
+.PHONY : Input.cpp.s
 
 MVP.obj: MVP.cpp.obj
 
@@ -324,9 +378,15 @@ help:
 	@echo ... rebuild_cache
 	@echo ... test
 	@echo ... GLTexture
+	@echo ... Camera.obj
+	@echo ... Camera.i
+	@echo ... Camera.s
 	@echo ... Initiation.obj
 	@echo ... Initiation.i
 	@echo ... Initiation.s
+	@echo ... Input.obj
+	@echo ... Input.i
+	@echo ... Input.s
 	@echo ... MVP.obj
 	@echo ... MVP.i
 	@echo ... MVP.s

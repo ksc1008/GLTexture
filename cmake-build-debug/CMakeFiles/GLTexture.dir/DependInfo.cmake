@@ -14,7 +14,9 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../include"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/GLTexture/Camera.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/Camera.cpp.obj"
   "C:/GLTexture/Initiation.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/Initiation.cpp.obj"
+  "C:/GLTexture/Input.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/Input.cpp.obj"
   "C:/GLTexture/MVP.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/MVP.cpp.obj"
   "C:/GLTexture/Shader.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/Shader.cpp.obj"
   "C:/GLTexture/Texture.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/Texture.cpp.obj"
