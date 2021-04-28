@@ -32,9 +32,11 @@ MVP* mvpLight;
 
 void MainDisplay(){
 
+
+
     float timeValue = glfwGetTime()*2;
 
-    glm::vec3 lightPos(0.5, 1, -2);
+    glm::vec3 lightPos(0.5, 0.5, -2);
 
 
 
@@ -53,7 +55,7 @@ void MainDisplay(){
 ;
     glBindVertexArray(cubeBufferObject);
     glDrawArrays(GL_TRIANGLES,0,36);
-
+    glBindVertexArray(0);
     glm::mat4 trans = glm::identity<glm::mat4>();
     trans = glm::translate(trans,lightPos);
     trans = glm::scale(trans,glm::vec3(.2));
@@ -63,7 +65,7 @@ void MainDisplay(){
     mvpLight->SetVertexShaderTransform(LightShader->ID);
 
     glBindVertexArray(lightSourceVAO);
-    glDrawArrays(GL_TRIANGLES,0,36);
+    glDrawArrays(GL_TRIANGLES,0,1350);
     glBindVertexArray(0);
 
 
@@ -114,6 +116,8 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 
 
 int main(int argc, char**argv) {
+    int num=0;
+    CreateSphere(5,5,1, &num);
     mvp = new MVP();
     mvpLight = new MVP();
     stbi__vertically_flip_on_load =true;

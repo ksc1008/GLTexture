@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/GLTexture.dir/Camera.cpp.obj"
+  "CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj"
   "CMakeFiles/GLTexture.dir/Initiation.cpp.obj"
   "CMakeFiles/GLTexture.dir/Input.cpp.obj"
   "CMakeFiles/GLTexture.dir/MVP.cpp.obj"

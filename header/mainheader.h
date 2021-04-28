@@ -16,6 +16,7 @@ extern Texture texture1;
 extern float deltaTime;
 extern float Rot;
 extern unsigned int cubeBufferArray;
+extern unsigned int sphereBufferArray;
 extern unsigned int cubeBufferObject;
 extern unsigned int lightSourceVAO;
 
@@ -23,7 +24,7 @@ extern void InputEvent(GLFWwindow* window);
 void InitShader();
 void InitObject();
 void InitTexture();
-
+extern float* CreateSphere(int stack, int slice, float radius,int* vertexNum);
 extern Shader* ShaderNoColor;
 extern Shader* LightingShader;
 extern Shader* LightShader;
