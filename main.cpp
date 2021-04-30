@@ -30,15 +30,14 @@ MVP* mvp;
 MVP* mvpLight;
 
 
+float lightX = 0.5;
+float lightY = 0.5;
+float lightZ = -2;
+
 void MainDisplay(){
-
-
-
     float timeValue = glfwGetTime()*2;
 
-    glm::vec3 lightPos(0.5, 0.5, -2);
-
-
+    glm::vec3 lightPos(lightX, lightY, lightZ);
 
     mvp->SetView(camera.GetViewMatrix());
     mvpLight->SetView(camera.GetViewMatrix());
@@ -54,7 +53,7 @@ void MainDisplay(){
     LightingShader->setVec3("viewPos",camera.Position);
 ;
     glBindVertexArray(cubeBufferObject);
-    glDrawArrays(GL_TRIANGLES,0,36);
+    glDrawArrays(GL_TRIANGLES,0,vertNum);
     glBindVertexArray(0);
     glm::mat4 trans = glm::identity<glm::mat4>();
     trans = glm::translate(trans,lightPos);
@@ -65,7 +64,7 @@ void MainDisplay(){
     mvpLight->SetVertexShaderTransform(LightShader->ID);
 
     glBindVertexArray(lightSourceVAO);
-    glDrawArrays(GL_TRIANGLES,0,1350);
+    glDrawArrays(GL_TRIANGLES,0,36);
     glBindVertexArray(0);
 
 
@@ -88,6 +87,16 @@ void processInput(GLFWwindow *window)
         camera.ProcessKeyboard(LEFT, deltaTime);
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
         camera.ProcessKeyboard(RIGHT, deltaTime);
+
+
+    if (glfwGetKey(window, GLFW_KEY_H) == GLFW_PRESS)
+        lightX-=deltaTime;
+    if (glfwGetKey(window, GLFW_KEY_U) == GLFW_PRESS)
+        lightZ+=deltaTime;
+    if (glfwGetKey(window, GLFW_KEY_J) == GLFW_PRESS)
+        lightZ-=deltaTime;
+    if (glfwGetKey(window, GLFW_KEY_K) == GLFW_PRESS)
+        lightX+=deltaTime;
 }
 
 // -------------------------------------------------------
@@ -117,7 +126,7 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 
 int main(int argc, char**argv) {
     int num=0;
-    CreateSphere(5,5,1, &num);
+    //CreateSphere(5,5,1, &num);
     mvp = new MVP();
     mvpLight = new MVP();
     stbi__vertically_flip_on_load =true;

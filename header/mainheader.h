@@ -20,11 +20,14 @@ extern unsigned int sphereBufferArray;
 extern unsigned int cubeBufferObject;
 extern unsigned int lightSourceVAO;
 
+extern int vertNum;
+
 extern void InputEvent(GLFWwindow* window);
 void InitShader();
 void InitObject();
 void InitTexture();
 extern float* CreateSphere(int stack, int slice, float radius,int* vertexNum);
+extern float* CreateSphereWithNormal(int stack, int slice, float radius,int* vertexNum);
 extern Shader* ShaderNoColor;
 extern Shader* LightingShader;
 extern Shader* LightShader;
