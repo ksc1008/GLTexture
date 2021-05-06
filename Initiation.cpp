@@ -8,6 +8,7 @@ unsigned int cubeBufferArray;
 unsigned int cubeBufferObject;
 unsigned int lightSourceVAO;
 unsigned int sphereBufferArray;
+unsigned int sphereVAO;
 
 
 
@@ -110,7 +111,7 @@ void InitTexture(){
 }
 
 void InitShader(){
-    LightingShader = new Shader("shaders/vSmoothLightingShader.glsl","shaders/fSmoothLightingShader.glsl");
+    LightingShader = new Shader("shaders/0.vShaderMaterial.glsl","shaders/0.fShaderMaterial.glsl");
     LightShader = new Shader("shaders/vLightingShader.glsl","shaders/fLightSourceShader.glsl");
     ShaderNoColor = new Shader("shaders/vertexShaderNoColor.glsl","shaders/fragmentShaderNoColor.glsl");
 }
@@ -120,8 +121,10 @@ void InitObject(){
     glGenBuffers(1,&cubeBufferArray);
     glGenBuffers(1,&sphereBufferArray);
     glGenVertexArrays(1,&lightSourceVAO);
+    glGenVertexArrays(1,&sphereVAO);
     glGenVertexArrays(1,&cubeBufferObject);
 
+    glBindVertexArray(cubeBufferObject);
     glBindBuffer(GL_ARRAY_BUFFER,cubeBufferArray);
     glBufferData(GL_ARRAY_BUFFER,sizeof(cubeVerticesNormal),cubeVerticesNormal,GL_STATIC_DRAW);
     //vertex
@@ -133,7 +136,7 @@ void InitObject(){
 
     glBindBuffer(GL_ARRAY_BUFFER,0);
 
-    glBindVertexArray(cubeBufferObject);
+    glBindVertexArray(sphereVAO);
     glBindBuffer(GL_ARRAY_BUFFER,sphereBufferArray);
     glBufferData(GL_ARRAY_BUFFER,vertNum*sizeof(float),SphereVertices,GL_STATIC_DRAW);
     //vertex

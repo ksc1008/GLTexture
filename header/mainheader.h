@@ -19,6 +19,7 @@ extern unsigned int cubeBufferArray;
 extern unsigned int sphereBufferArray;
 extern unsigned int cubeBufferObject;
 extern unsigned int lightSourceVAO;
+extern unsigned int sphereVAO;
 
 extern int vertNum;
 

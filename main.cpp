@@ -36,25 +36,39 @@ float lightZ = -2;
 
 void MainDisplay(){
     float timeValue = glfwGetTime()*2;
+    LightingShader->use();
 
     glm::vec3 lightPos(lightX, lightY, lightZ);
 
     mvp->SetView(camera.GetViewMatrix());
     mvpLight->SetView(camera.GetViewMatrix());
     mvp->SetModel(glm::rotate(glm::identity<glm::mat4>(),Rot,glm::vec3(0,1,0)));
+    mvp->SetVertexShaderTransform(LightingShader->ID);
 
     glClearColor(.2f,0,0,1);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    LightingShader->use();
-    mvp->SetVertexShaderTransform(LightingShader->ID);
     LightingShader->setVec3("objectColor",.3,.5,.2);
+    LightingShader->setVec3("material.ambient",0.2125,0.1275,0.054);
+    LightingShader->setVec3("material.diffuse",0.714	,0.4284,0.18144);
+    LightingShader->setVec3("material.specular",0.393548,0.271906,0.166721);
+    LightingShader->setFloat("material.shininess",25.6);
     LightingShader->setVec3("lightColor",1,1,1);
     LightingShader->setVec3("lightPos",lightPos);
     LightingShader->setVec3("viewPos",camera.Position);
-;
     glBindVertexArray(cubeBufferObject);
-    glDrawArrays(GL_TRIANGLES,0,vertNum);
+    glDrawArrays(GL_TRIANGLES,0,36);
     glBindVertexArray(0);
+
+    glm::mat4 model = glm::mat4(1);
+    model = glm::translate(model,glm::vec3(1,.3,.3));
+    model = glm::scale(model,glm::vec3(.4,.4,.4));
+    mvp->SetModel(model);
+    mvp->SetVertexShaderTransform(LightingShader->ID);
+
+    glBindVertexArray(sphereVAO);
+    glDrawArrays(GL_TRIANGLES,0,vertNum);
+    glBindVertexArray(0);;
+
     glm::mat4 trans = glm::identity<glm::mat4>();
     trans = glm::translate(trans,lightPos);
     trans = glm::scale(trans,glm::vec3(.2));
