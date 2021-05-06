@@ -12,7 +12,9 @@
 void InitGlfw();
 void InitLight();
 extern Texture texture0;
+extern Texture texture2;
 extern Texture texture1;
+extern Texture texture3;
 extern float deltaTime;
 extern float Rot;
 extern unsigned int cubeBufferArray;
@@ -32,4 +34,9 @@ extern float* CreateSphereWithNormal(int stack, int slice, float radius,int* ver
 extern Shader* ShaderNoColor;
 extern Shader* LightingShader;
 extern Shader* LightShader;
+extern Shader* TextureShader;
+
+extern float cubeVerticesNormal[216];
+extern float cubeVerticesTexture[288];
+extern float cubeVertices[180];
 #endif //GLTEXTURE_MAINHEADER_H

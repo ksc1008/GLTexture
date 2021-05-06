@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/GLTexture.dir/MVP.cpp.obj"
   "CMakeFiles/GLTexture.dir/Shader.cpp.obj"
   "CMakeFiles/GLTexture.dir/Texture.cpp.obj"
+  "CMakeFiles/GLTexture.dir/VertexData.cpp.obj"
   "CMakeFiles/GLTexture.dir/glad.c.obj"
   "CMakeFiles/GLTexture.dir/main.cpp.obj"
   "GLTexture.exe"

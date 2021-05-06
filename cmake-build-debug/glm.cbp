@@ -116,6 +116,9 @@
 		<Unit filename="C:/GLTexture/Texture.cpp">
 			<Option target="GLTexture"/>
 		</Unit>
+		<Unit filename="C:/GLTexture/VertexData.cpp">
+			<Option target="GLTexture"/>
+		</Unit>
 		<Unit filename="C:/GLTexture/glad.c">
 			<Option target="GLTexture"/>
 		</Unit>

@@ -342,6 +342,33 @@ Texture.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Texture.cpp.s
 .PHONY : Texture.cpp.s
 
+VertexData.obj: VertexData.cpp.obj
+
+.PHONY : VertexData.obj
+
+# target to build an object file
+VertexData.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/VertexData.cpp.obj
+.PHONY : VertexData.cpp.obj
+
+VertexData.i: VertexData.cpp.i
+
+.PHONY : VertexData.i
+
+# target to preprocess a source file
+VertexData.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/VertexData.cpp.i
+.PHONY : VertexData.cpp.i
+
+VertexData.s: VertexData.cpp.s
+
+.PHONY : VertexData.s
+
+# target to generate assembly for a file
+VertexData.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/VertexData.cpp.s
+.PHONY : VertexData.cpp.s
+
 glad.obj: glad.c.obj
 
 .PHONY : glad.obj
@@ -427,6 +454,9 @@ help:
 	@echo ... Texture.obj
 	@echo ... Texture.i
 	@echo ... Texture.s
+	@echo ... VertexData.obj
+	@echo ... VertexData.i
+	@echo ... VertexData.s
 	@echo ... glad.obj
 	@echo ... glad.i
 	@echo ... glad.s

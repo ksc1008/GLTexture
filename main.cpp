@@ -19,6 +19,7 @@ GLFWwindow* window;
 float green;
 Shader* ShaderNoColor = nullptr;
 Shader* LightingShader = nullptr;
+Shader* TextureShader = nullptr;
 Shader* LightShader = nullptr;
 float Rot=0;
 float deltaTime = 0;
@@ -36,17 +37,44 @@ float lightZ = -2;
 
 void MainDisplay(){
     float timeValue = glfwGetTime()*2;
-    LightingShader->use();
+    TextureShader->use();
 
     glm::vec3 lightPos(lightX, lightY, lightZ);
 
     mvp->SetView(camera.GetViewMatrix());
     mvpLight->SetView(camera.GetViewMatrix());
     mvp->SetModel(glm::rotate(glm::identity<glm::mat4>(),Rot,glm::vec3(0,1,0)));
-    mvp->SetVertexShaderTransform(LightingShader->ID);
+    mvp->SetVertexShaderTransform(TextureShader->ID);
 
     glClearColor(.2f,0,0,1);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    TextureShader->setVec3("light.ambient",  0.1f, 0.1f, 0.1f);
+    TextureShader->setVec3("light.diffuse",  1, 1, 1); // darken diffuse light a bit
+    TextureShader->setVec3("light.specular", 1.0f, 1.0f, 1.0f);
+    TextureShader->setVec3("light.position",lightPos);
+    TextureShader->setVec3("objectColor",1,1,1);
+    TextureShader->setInt("material.diffuse",0);
+    TextureShader->setInt("material.specular",1);
+    TextureShader->setVec3("material.specular",0.5,0.5,0.5);
+    TextureShader->setFloat("material.shininess",25.6);
+    TextureShader->setVec3("lightColor",1,1,1);
+    TextureShader->setVec3("lightPos",lightPos);
+    TextureShader->setVec3("viewPos",camera.Position);
+    glBindVertexArray(cubeBufferObject);
+    glActiveTexture(GL_TEXTURE0);
+    texture2.Bind();
+    glActiveTexture(GL_TEXTURE1);
+    texture3.Bind();
+    glDrawArrays(GL_TRIANGLES,0,36);
+    glBindVertexArray(0);
+
+    glm::mat4 model = glm::mat4(1);
+    model = glm::translate(model,glm::vec3(1,.3,.3));
+    model = glm::scale(model,glm::vec3(.4,.4,.4));
+    mvp->SetModel(model);
+
+    LightingShader->use();
+    mvp->SetVertexShaderTransform(LightingShader->ID);
     LightingShader->setVec3("objectColor",.3,.5,.2);
     LightingShader->setVec3("material.ambient",0.2125,0.1275,0.054);
     LightingShader->setVec3("material.diffuse",0.714	,0.4284,0.18144);
@@ -55,15 +83,6 @@ void MainDisplay(){
     LightingShader->setVec3("lightColor",1,1,1);
     LightingShader->setVec3("lightPos",lightPos);
     LightingShader->setVec3("viewPos",camera.Position);
-    glBindVertexArray(cubeBufferObject);
-    glDrawArrays(GL_TRIANGLES,0,36);
-    glBindVertexArray(0);
-
-    glm::mat4 model = glm::mat4(1);
-    model = glm::translate(model,glm::vec3(1,.3,.3));
-    model = glm::scale(model,glm::vec3(.4,.4,.4));
-    mvp->SetModel(model);
-    mvp->SetVertexShaderTransform(LightingShader->ID);
 
     glBindVertexArray(sphereVAO);
     glDrawArrays(GL_TRIANGLES,0,vertNum);
