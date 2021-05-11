@@ -75,11 +75,11 @@ void MainDisplay(){
 
     LightingShader->use();
     mvp->SetVertexShaderTransform(LightingShader->ID);
-    LightingShader->setVec3("objectColor",.3,.5,.2);
+    LightingShader->setVec3("objectColor",.8,.8,.8);
     LightingShader->setVec3("material.ambient",0.2125,0.1275,0.054);
     LightingShader->setVec3("material.diffuse",0.714	,0.4284,0.18144);
-    LightingShader->setVec3("material.specular",0.393548,0.271906,0.166721);
-    LightingShader->setFloat("material.shininess",25.6);
+    LightingShader->setVec3("material.specular",0.6,0.6,0.6);
+    LightingShader->setFloat("material.shininess",51.2);
     LightingShader->setVec3("lightColor",1,1,1);
     LightingShader->setVec3("lightPos",lightPos);
     LightingShader->setVec3("viewPos",camera.Position);
@@ -107,29 +107,33 @@ void MainDisplay(){
     glfwPollEvents();
 }
 
-void processInput(GLFWwindow *window)
+void processInput(GLFWwindow *_window)
 {
-    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-        glfwSetWindowShouldClose(window, true);
+    if (glfwGetKey(_window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+        glfwSetWindowShouldClose(_window, true);
 
-    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+    if (glfwGetKey(_window, GLFW_KEY_W) == GLFW_PRESS)
         camera.ProcessKeyboard(FORWARD, deltaTime);
-    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+    if (glfwGetKey(_window, GLFW_KEY_S) == GLFW_PRESS)
         camera.ProcessKeyboard(BACKWARD, deltaTime);
-    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+    if (glfwGetKey(_window, GLFW_KEY_A) == GLFW_PRESS)
         camera.ProcessKeyboard(LEFT, deltaTime);
-    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+    if (glfwGetKey(_window, GLFW_KEY_D) == GLFW_PRESS)
         camera.ProcessKeyboard(RIGHT, deltaTime);
 
 
-    if (glfwGetKey(window, GLFW_KEY_H) == GLFW_PRESS)
+    if (glfwGetKey(_window, GLFW_KEY_K) == GLFW_PRESS)
         lightX-=deltaTime;
-    if (glfwGetKey(window, GLFW_KEY_U) == GLFW_PRESS)
+    if (glfwGetKey(_window, GLFW_KEY_U) == GLFW_PRESS)
         lightZ+=deltaTime;
-    if (glfwGetKey(window, GLFW_KEY_J) == GLFW_PRESS)
+    if (glfwGetKey(_window, GLFW_KEY_J) == GLFW_PRESS)
         lightZ-=deltaTime;
-    if (glfwGetKey(window, GLFW_KEY_K) == GLFW_PRESS)
+    if (glfwGetKey(_window, GLFW_KEY_H) == GLFW_PRESS)
         lightX+=deltaTime;
+    if (glfwGetKey(_window, GLFW_KEY_Y) == GLFW_PRESS)
+        lightY+=deltaTime;
+    if (glfwGetKey(_window, GLFW_KEY_I) == GLFW_PRESS)
+        lightY-=deltaTime;
 }
 
 // -------------------------------------------------------
