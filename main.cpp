@@ -41,6 +41,7 @@ void MainDisplay(){
 
     glm::vec3 lightPos(lightX, lightY, lightZ);
 
+    //MVP 설정
     mvp->SetView(camera.GetViewMatrix());
     mvpLight->SetView(camera.GetViewMatrix());
     mvp->SetModel(glm::rotate(glm::identity<glm::mat4>(),Rot,glm::vec3(0,1,0)));
@@ -48,9 +49,14 @@ void MainDisplay(){
 
     glClearColor(.2f,0,0,1);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    //Light Mateiral 인자 설정
     TextureShader->setVec3("light.ambient",  0.1f, 0.1f, 0.1f);
     TextureShader->setVec3("light.diffuse",  1, 1, 1); // darken diffuse light a bit
     TextureShader->setVec3("light.specular", 1.0f, 1.0f, 1.0f);
+    TextureShader->setFloat("light.constant",1.0);
+    TextureShader->setFloat("light.linear",0.14);
+    TextureShader->setFloat("light.quadratic",0.07);
     TextureShader->setVec3("light.position",lightPos);
     TextureShader->setVec3("objectColor",1,1,1);
     TextureShader->setInt("material.diffuse",0);
@@ -60,7 +66,10 @@ void MainDisplay(){
     TextureShader->setVec3("lightColor",1,1,1);
     TextureShader->setVec3("lightPos",lightPos);
     TextureShader->setVec3("viewPos",camera.Position);
+
+    //Cube Bind
     glBindVertexArray(cubeBufferObject);
+    //텍스처 할당
     glActiveTexture(GL_TEXTURE0);
     texture2.Bind();
     glActiveTexture(GL_TEXTURE1);
@@ -68,7 +77,25 @@ void MainDisplay(){
     glDrawArrays(GL_TRIANGLES,0,36);
     glBindVertexArray(0);
 
+
+    glBindVertexArray(cubeBufferObject);
     glm::mat4 model = glm::mat4(1);
+    model = glm::translate(model,glm::vec3(0,-.55,0));
+    model = glm::scale(model,glm::vec3(5,.1,5));
+    mvp->SetModel(model);
+    mvp->SetVertexShaderTransform(TextureShader->ID);
+
+    glActiveTexture(GL_TEXTURE0);
+    texture0.Bind();
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_2D,0);
+
+    glDrawArrays(GL_TRIANGLES,0,36);
+    glBindVertexArray(0);
+    glBindVertexArray(cubeBufferObject);
+
+
+    model = glm::mat4(1);
     model = glm::translate(model,glm::vec3(1,.3,.3));
     model = glm::scale(model,glm::vec3(.4,.4,.4));
     mvp->SetModel(model);
@@ -162,8 +189,6 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 
 
 int main(int argc, char**argv) {
-    int num=0;
-    //CreateSphere(5,5,1, &num);
     mvp = new MVP();
     mvpLight = new MVP();
     stbi__vertically_flip_on_load =true;
