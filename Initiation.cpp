@@ -31,7 +31,7 @@ void InitTexture(){
 }
 
 void InitShader(){
-    TextureShader = new Shader("shaders/2.vShaderPointLight.glsl","shaders/2.fShaderPointLight.glsl");
+    TextureShader = new Shader("shaders/3.vShaderFlashLight.glsl","shaders/3.fShaderFlashLight.glsl");
     LightingShader = new Shader("shaders/0.vShaderMaterial.glsl","shaders/0.fShaderMaterial.glsl");
     LightShader = new Shader("shaders/vLightingShader.glsl","shaders/fLightSourceShader.glsl");
     ShaderNoColor = new Shader("shaders/vertexShaderNoColor.glsl","shaders/fragmentShaderNoColor.glsl");

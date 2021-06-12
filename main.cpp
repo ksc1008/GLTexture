@@ -51,13 +51,19 @@ void MainDisplay(){
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     //Light Mateiral 인자 설정
+    TextureShader->setInt("light.enabled",  1);
+    TextureShader->setFloat("light.cutOff",  glm::cos(glm::radians(12.5f)));
+    TextureShader->setFloat("light.outerCutOff",  glm::cos(glm::radians(17.5f)));
+    TextureShader->setVec3("light.direction",  camera.Front);
+    TextureShader->setVec3("light.position",  camera.Position);
+
     TextureShader->setVec3("light.ambient",  0.1f, 0.1f, 0.1f);
     TextureShader->setVec3("light.diffuse",  1, 1, 1); // darken diffuse light a bit
     TextureShader->setVec3("light.specular", 1.0f, 1.0f, 1.0f);
     TextureShader->setFloat("light.constant",1.0);
     TextureShader->setFloat("light.linear",0.14);
     TextureShader->setFloat("light.quadratic",0.07);
-    TextureShader->setVec3("light.position",lightPos);
+    //TextureShader->setVec3("light.position",lightPos);
     TextureShader->setVec3("objectColor",1,1,1);
     TextureShader->setInt("material.diffuse",0);
     TextureShader->setInt("material.specular",1);
