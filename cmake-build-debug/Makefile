@@ -261,6 +261,33 @@ Input.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Input.cpp.s
 .PHONY : Input.cpp.s
 
+Light.obj: Light.cpp.obj
+
+.PHONY : Light.obj
+
+# target to build an object file
+Light.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Light.cpp.obj
+.PHONY : Light.cpp.obj
+
+Light.i: Light.cpp.i
+
+.PHONY : Light.i
+
+# target to preprocess a source file
+Light.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Light.cpp.i
+.PHONY : Light.cpp.i
+
+Light.s: Light.cpp.s
+
+.PHONY : Light.s
+
+# target to generate assembly for a file
+Light.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Light.cpp.s
+.PHONY : Light.cpp.s
+
 MVP.obj: MVP.cpp.obj
 
 .PHONY : MVP.obj
@@ -287,6 +314,33 @@ MVP.s: MVP.cpp.s
 MVP.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/MVP.cpp.s
 .PHONY : MVP.cpp.s
+
+Material.obj: Material.cpp.obj
+
+.PHONY : Material.obj
+
+# target to build an object file
+Material.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Material.cpp.obj
+.PHONY : Material.cpp.obj
+
+Material.i: Material.cpp.i
+
+.PHONY : Material.i
+
+# target to preprocess a source file
+Material.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Material.cpp.i
+.PHONY : Material.cpp.i
+
+Material.s: Material.cpp.s
+
+.PHONY : Material.s
+
+# target to generate assembly for a file
+Material.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Material.cpp.s
+.PHONY : Material.cpp.s
 
 Shader.obj: Shader.cpp.obj
 
@@ -445,9 +499,15 @@ help:
 	@echo ... Input.obj
 	@echo ... Input.i
 	@echo ... Input.s
+	@echo ... Light.obj
+	@echo ... Light.i
+	@echo ... Light.s
 	@echo ... MVP.obj
 	@echo ... MVP.i
 	@echo ... MVP.s
+	@echo ... Material.obj
+	@echo ... Material.i
+	@echo ... Material.s
 	@echo ... Shader.obj
 	@echo ... Shader.i
 	@echo ... Shader.s

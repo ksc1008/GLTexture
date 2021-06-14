@@ -12,16 +12,10 @@ unsigned int lightSourceVAO;
 unsigned int sphereBufferArray;
 unsigned int sphereVAO;
 
-
-
 int vertNum;
 int width, height, nrChannels;
 
 float* SphereVertices;
-
-
-
-
 
 void InitTexture(){
     texture0.LoadTexture();
@@ -31,10 +25,9 @@ void InitTexture(){
 }
 
 void InitShader(){
+    MainShader = new Shader("shaders/4.vShaderMultipleLights.glsl","shaders/4.fShaderMultipleLights.glsl");
     TextureShader = new Shader("shaders/3.vShaderFlashLight.glsl","shaders/3.fShaderFlashLight.glsl");
-    LightingShader = new Shader("shaders/0.vShaderMaterial.glsl","shaders/0.fShaderMaterial.glsl");
     LightShader = new Shader("shaders/vLightingShader.glsl","shaders/fLightSourceShader.glsl");
-    ShaderNoColor = new Shader("shaders/vertexShaderNoColor.glsl","shaders/fragmentShaderNoColor.glsl");
 }
 
 void InitObject(){

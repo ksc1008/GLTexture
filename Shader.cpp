@@ -75,6 +75,7 @@ void Shader::use() {
 
 void Shader::setBool(const std::string &name, bool value) const {
     glUniform1i(glGetUniformLocation(ID,name.c_str()),(int)value);
+
 }
 
 void Shader::setInt(const std::string &name, int value) const {
@@ -98,4 +99,10 @@ void Shader::setVec3(const std::string &name, glm::vec3 &vector) const {
     //std::cout<<name<<": "<<glGetUniformLocation(ID,name.c_str())<<std::endl;
     glUniform3fv(glGetUniformLocation(ID,name.c_str()),1,&vector[0]);
 
+}
+
+int Shader::GetInt(const std::string &name) const {
+    int result;
+    glGetUniformiv(ID,glGetUniformLocation(ID,name.c_str()),&result);
+    return result;
 }

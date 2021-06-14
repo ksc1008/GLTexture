@@ -107,7 +107,13 @@
 		<Unit filename="C:/GLTexture/Input.cpp">
 			<Option target="GLTexture"/>
 		</Unit>
+		<Unit filename="C:/GLTexture/Light.cpp">
+			<Option target="GLTexture"/>
+		</Unit>
 		<Unit filename="C:/GLTexture/MVP.cpp">
+			<Option target="GLTexture"/>
+		</Unit>
+		<Unit filename="C:/GLTexture/Material.cpp">
 			<Option target="GLTexture"/>
 		</Unit>
 		<Unit filename="C:/GLTexture/Shader.cpp">
@@ -122,7 +128,13 @@
 		<Unit filename="C:/GLTexture/glad.c">
 			<Option target="GLTexture"/>
 		</Unit>
+		<Unit filename="C:/GLTexture/header/Light.h">
+			<Option target="GLTexture"/>
+		</Unit>
 		<Unit filename="C:/GLTexture/header/MVP.h">
+			<Option target="GLTexture"/>
+		</Unit>
+		<Unit filename="C:/GLTexture/header/Material.h">
 			<Option target="GLTexture"/>
 		</Unit>
 		<Unit filename="C:/GLTexture/header/Shader.h">

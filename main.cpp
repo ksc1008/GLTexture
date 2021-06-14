@@ -9,35 +9,45 @@
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 #include "glm/gtc/type_ptr.hpp"
+
+#include "header/Material.h"
+#include "header/Light.h"
 #include "header/MVP.h"
 bool firstMouse = true;
-float lastX = WIN_WIDTH;
-float lastY = WIN_HEIGHT;
+double lastX = WIN_WIDTH;
+double lastY = WIN_HEIGHT;
 
 int id;
 GLFWwindow* window;
 float green;
-Shader* ShaderNoColor = nullptr;
-Shader* LightingShader = nullptr;
 Shader* TextureShader = nullptr;
+Shader* MainShader = nullptr;
 Shader* LightShader = nullptr;
 float Rot=0;
-float deltaTime = 0;
-float currentFrame = glfwGetTime();
-float lastFrame = glfwGetTime();
+double deltaTime = 0;
+double currentFrame = glfwGetTime();
+double lastFrame = glfwGetTime();
 
 Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
 MVP* mvp;
 MVP* mvpLight;
 
+Material* containerMat;
+Material* sphereMat;
 
-float lightX = 0.5;
-float lightY = 0.5;
-float lightZ = -2;
+Light* FlashLight;
+Light* PointLight0;
+Light* PointLight1;
+Light* PointLight2;
+Light* DirectionalLight;
+
+double lightX = 0.5;
+double lightY = 0.5;
+double lightZ = -2;
 
 void MainDisplay(){
-    float timeValue = glfwGetTime()*2;
-    TextureShader->use();
+    //double timeValue = glfwGetTime()*2;
+    MainShader->use();
 
     glm::vec3 lightPos(lightX, lightY, lightZ);
 
@@ -45,33 +55,25 @@ void MainDisplay(){
     mvp->SetView(camera.GetViewMatrix());
     mvpLight->SetView(camera.GetViewMatrix());
     mvp->SetModel(glm::rotate(glm::identity<glm::mat4>(),Rot,glm::vec3(0,1,0)));
-    mvp->SetVertexShaderTransform(TextureShader->ID);
+    mvp->SetVertexShaderTransform(MainShader->ID);
 
     glClearColor(.2f,0,0,1);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     //Light Mateiral 인자 설정
-    TextureShader->setInt("light.enabled",  1);
-    TextureShader->setFloat("light.cutOff",  glm::cos(glm::radians(12.5f)));
-    TextureShader->setFloat("light.outerCutOff",  glm::cos(glm::radians(17.5f)));
-    TextureShader->setVec3("light.direction",  camera.Front);
-    TextureShader->setVec3("light.position",  camera.Position);
 
-    TextureShader->setVec3("light.ambient",  0.1f, 0.1f, 0.1f);
-    TextureShader->setVec3("light.diffuse",  1, 1, 1); // darken diffuse light a bit
-    TextureShader->setVec3("light.specular", 1.0f, 1.0f, 1.0f);
-    TextureShader->setFloat("light.constant",1.0);
-    TextureShader->setFloat("light.linear",0.14);
-    TextureShader->setFloat("light.quadratic",0.07);
-    //TextureShader->setVec3("light.position",lightPos);
-    TextureShader->setVec3("objectColor",1,1,1);
-    TextureShader->setInt("material.diffuse",0);
-    TextureShader->setInt("material.specular",1);
-    TextureShader->setVec3("material.specular",0.5,0.5,0.5);
-    TextureShader->setFloat("material.shininess",25.6);
-    TextureShader->setVec3("lightColor",1,1,1);
-    TextureShader->setVec3("lightPos",lightPos);
-    TextureShader->setVec3("viewPos",camera.Position);
+    FlashLight->direction = camera.Front;
+    FlashLight->position = camera.Position;
+    FlashLight->ApplyToShader(*MainShader,FlashLight->_id);
+
+    MainShader->setInt("directionalNum",MainShader->DirectionalNum);
+    MainShader->setInt("pointNum",MainShader->PointNum);
+    MainShader->setInt("spotNum",MainShader->SpotNum);
+    MainShader->setVec3("objectColor",1,1,1);
+
+    containerMat->ApplyToShader(*MainShader);
+
+    MainShader->setVec3("viewPos",camera.Position);
 
     //Cube Bind
     glBindVertexArray(cubeBufferObject);
@@ -83,13 +85,12 @@ void MainDisplay(){
     glDrawArrays(GL_TRIANGLES,0,36);
     glBindVertexArray(0);
 
-
     glBindVertexArray(cubeBufferObject);
     glm::mat4 model = glm::mat4(1);
     model = glm::translate(model,glm::vec3(0,-.55,0));
     model = glm::scale(model,glm::vec3(5,.1,5));
     mvp->SetModel(model);
-    mvp->SetVertexShaderTransform(TextureShader->ID);
+    mvp->SetVertexShaderTransform(MainShader->ID);
 
     glActiveTexture(GL_TEXTURE0);
     texture0.Bind();
@@ -106,20 +107,13 @@ void MainDisplay(){
     model = glm::scale(model,glm::vec3(.4,.4,.4));
     mvp->SetModel(model);
 
-    LightingShader->use();
-    mvp->SetVertexShaderTransform(LightingShader->ID);
-    LightingShader->setVec3("objectColor",.8,.8,.8);
-    LightingShader->setVec3("material.ambient",0.2125,0.1275,0.054);
-    LightingShader->setVec3("material.diffuse",0.714	,0.4284,0.18144);
-    LightingShader->setVec3("material.specular",0.6,0.6,0.6);
-    LightingShader->setFloat("material.shininess",51.2);
-    LightingShader->setVec3("lightColor",1,1,1);
-    LightingShader->setVec3("lightPos",lightPos);
-    LightingShader->setVec3("viewPos",camera.Position);
+    mvp->SetVertexShaderTransform(MainShader->ID);
+
+    sphereMat->ApplyToShader(*MainShader);
 
     glBindVertexArray(sphereVAO);
     glDrawArrays(GL_TRIANGLES,0,vertNum);
-    glBindVertexArray(0);;
+    glBindVertexArray(0);
 
     glm::mat4 trans = glm::identity<glm::mat4>();
     trans = glm::translate(trans,lightPos);
@@ -132,9 +126,6 @@ void MainDisplay(){
     glBindVertexArray(lightSourceVAO);
     glDrawArrays(GL_TRIANGLES,0,36);
     glBindVertexArray(0);
-
-
-
 
     glfwSwapBuffers(window);
     glfwPollEvents();
@@ -170,7 +161,7 @@ void processInput(GLFWwindow *_window)
 }
 
 // -------------------------------------------------------
-void mouse_callback(GLFWwindow* window, double xpos, double ypos)
+void mouse_callback(GLFWwindow* _window, double xpos, double ypos)
 {
     if (firstMouse)
     {
@@ -179,8 +170,8 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos)
         firstMouse = false;
     }
 
-    float xoffset = xpos - lastX;
-    float yoffset = lastY - ypos; // reversed since y-coordinates go from bottom to top
+    double xoffset = xpos - lastX;
+    double yoffset = lastY - ypos; // reversed since y-coordinates go from bottom to top
 
     lastX = xpos;
     lastY = ypos;
@@ -188,7 +179,7 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos)
     camera.ProcessMouseMovement(xoffset, yoffset);
 }
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
+void framebuffer_size_callback(GLFWwindow* _window, int width, int height)
 {
     glViewport(0, 0, width, height);
 }
@@ -199,8 +190,8 @@ int main(int argc, char**argv) {
     mvpLight = new MVP();
     stbi__vertically_flip_on_load =true;
     InitGlfw();
-    window = glfwCreateWindow(WIN_WIDTH,WIN_HEIGHT,"HAHA",NULL,NULL);
-    if(window == NULL){
+    window = glfwCreateWindow(WIN_WIDTH,WIN_HEIGHT,"HAHA",nullptr,nullptr);
+    if(window == nullptr){
         std::cout <<"OOPS"<<"\n";
         glfwTerminate();
         return -1;
@@ -224,6 +215,35 @@ int main(int argc, char**argv) {
     glm::mat4 view = glm::mat4(1.0f);
     view = glm::translate(view,glm::vec3(0.0f,0.0f,-3.0f));
     mvp->SetView(view);
+
+    FlashLight = new Light();
+    sphereMat = new Material();
+    containerMat = new Material();
+
+    sphereMat->SetDiffuseColor(0.8,0.8,0.2);
+    sphereMat->SetSpecularColor(1,1,1);
+    sphereMat->SetShininess(40);
+
+    containerMat->SetDiffuseMap(0);
+    containerMat->SetSpecularMap(1);
+    containerMat->SetShininess(25.6f);
+
+    FlashLight->type = SPOT;
+    FlashLight->constant = 1.0;
+    FlashLight->linear = 0.14;
+    FlashLight->quadratic = 0.07;
+    FlashLight->ambient = glm::vec3(.1f,.1f,.1f);
+    FlashLight->specular = glm::vec3(1.0f,1.0f,1.0f);
+    FlashLight->diffuse = glm::vec3(1,1,1);
+    FlashLight->direction = glm::vec3(camera.Front);
+    FlashLight->position = glm::vec3(camera.Position);
+    FlashLight->cutOff = glm::cos(glm::radians(12.5f));
+    FlashLight->outerCutOff = glm::cos(glm::radians(17.5f));
+    MainShader->setInt("directionalNum",MainShader->DirectionalNum);
+    MainShader->setInt("pointNum",MainShader->PointNum);
+    MainShader->setInt("spotNum",MainShader->SpotNum);
+    FlashLight->AddToShader(MainShader);
+
     while(!glfwWindowShouldClose(window))
     {
         currentFrame = glfwGetTime();

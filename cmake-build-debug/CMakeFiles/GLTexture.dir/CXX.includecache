@@ -1474,6 +1474,12 @@ C:/GLTexture/glm/detail/setup.hpp
 detail/func_vector_relational.inl
 C:/GLTexture/glm/detail/func_vector_relational.inl
 
+C:/GLTexture/header/Light.h
+../glm/glm.hpp
+C:/GLTexture/glm/glm.hpp
+Shader.h
+C:/GLTexture/header/Shader.h
+
 C:/GLTexture/header/MVP.h
 glad/glad.h
 -
@@ -1481,6 +1487,14 @@ glad/glad.h
 C:/GLTexture/glm/glm.hpp
 ../glm/gtc/matrix_transform.hpp
 C:/GLTexture/glm/gtc/matrix_transform.hpp
+
+C:/GLTexture/header/Material.h
+glad/glad.h
+C:/GLTexture/header/glad/glad.h
+Shader.h
+C:/GLTexture/header/Shader.h
+../glm/glm.hpp
+C:/GLTexture/glm/glm.hpp
 
 C:/GLTexture/header/Shader.h
 glad/glad.h
@@ -1565,6 +1579,10 @@ glm/gtc/matrix_transform.hpp
 C:/GLTexture/glm/gtc/matrix_transform.hpp
 glm/gtc/type_ptr.hpp
 C:/GLTexture/glm/gtc/type_ptr.hpp
+header/Material.h
+C:/GLTexture/header/Material.h
+header/Light.h
+C:/GLTexture/header/Light.h
 header/MVP.h
 C:/GLTexture/header/MVP.h
 

@@ -34,8 +34,8 @@ public:
     glm::vec3 Right;
     glm::vec3 WorldUp;
     // euler Angles
-    float Yaw;
-    float Pitch;
+    double Yaw;
+    double Pitch;
     // camera options
     float MovementSpeed;
     float MouseSensitivity;
@@ -67,7 +67,7 @@ public:
     }
 
     // processes input received from any keyboard-like input system. Accepts input parameter in the form of camera defined ENUM (to abstract it from windowing systems)
-    void ProcessKeyboard(Camera_Movement direction, float deltaTime)
+    void ProcessKeyboard(Camera_Movement direction, double deltaTime)
     {
         float velocity = MovementSpeed * deltaTime;
         if (direction == FORWARD)
@@ -81,7 +81,7 @@ public:
     }
 
     // processes input received from a mouse input system. Expects the offset value in both the x and y direction.
-    void ProcessMouseMovement(float xoffset, float yoffset, GLboolean constrainPitch = true)
+    void ProcessMouseMovement(double xoffset, double yoffset, GLboolean constrainPitch = true)
     {
         xoffset *= MouseSensitivity;
         yoffset *= MouseSensitivity;

@@ -15,7 +15,7 @@ extern Texture texture0;
 extern Texture texture2;
 extern Texture texture1;
 extern Texture texture3;
-extern float deltaTime;
+extern double deltaTime;
 extern float Rot;
 extern unsigned int cubeBufferArray;
 extern unsigned int sphereBufferArray;
@@ -35,6 +35,7 @@ extern Shader* ShaderNoColor;
 extern Shader* LightingShader;
 extern Shader* LightShader;
 extern Shader* TextureShader;
+extern Shader* MainShader;
 
 extern float cubeVerticesNormal[216];
 extern float cubeVerticesTexture[288];
