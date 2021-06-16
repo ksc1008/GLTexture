@@ -1,0 +1,7 @@
+C:/GLTexture/cmake-build-release/CMakeFiles/GLTexture.dir
+C:/GLTexture/cmake-build-release/CMakeFiles/rebuild_cache.dir
+C:/GLTexture/cmake-build-release/CMakeFiles/test.dir
+C:/GLTexture/cmake-build-release/CMakeFiles/edit_cache.dir
+C:/GLTexture/cmake-build-release/glm/CMakeFiles/rebuild_cache.dir
+C:/GLTexture/cmake-build-release/glm/CMakeFiles/test.dir
+C:/GLTexture/cmake-build-release/glm/CMakeFiles/edit_cache.dir

@@ -30,6 +30,43 @@ void InitShader(){
     LightShader = new Shader("shaders/vLightingShader.glsl","shaders/fLightSourceShader.glsl");
 }
 
+void InitLights(){
+    FlashLight = new Light();
+
+    FlashLight->type = SPOT;
+    FlashLight->constant = 1.0;
+    FlashLight->linear = 0.14;
+    FlashLight->quadratic = 0.07;
+    FlashLight->ambient = glm::vec3(.1f,.1f,.1f);
+    FlashLight->specular = glm::vec3(1.0f,1.0f,1.0f);
+    FlashLight->diffuse = glm::vec3(1,1,1);
+    FlashLight->cutOff = glm::cos(glm::radians(12.5f));
+    FlashLight->outerCutOff = glm::cos(glm::radians(17.5f));
+
+    PointLight0 = new Light();
+    PointLight0->type = POINT;
+    PointLight0->constant = 1.0;
+    PointLight0->linear = 0.14;
+    PointLight0->quadratic = 0.07;
+    PointLight0->ambient = glm::vec3(.1f,.0f,.0f);
+    PointLight0->specular = glm::vec3(1.0f,.0,0);
+    PointLight0->diffuse = glm::vec3(1,0,0);
+    PointLight0->position = glm::vec3(0.5,0.5,-2);
+
+    PointLight1 = new Light();
+    PointLight1->type = POINT;
+    PointLight1->constant = 1.0;
+    PointLight1->linear = 0.14;
+    PointLight1->quadratic = 0.07;
+    PointLight1->ambient = glm::vec3(0,0,0.1f);
+    PointLight1->specular = glm::vec3(0,0,1);
+    PointLight1->diffuse = glm::vec3(0,0,1);
+    PointLight1->position = glm::vec3(0.5,0.5,2);
+    FlashLight->AddToShader(MainShader);
+    PointLight0->AddToShader(MainShader);
+    PointLight1->AddToShader(MainShader);
+}
+
 void InitObject(){
     SphereVertices = CreateSphereWithNormal(50,50,.5,&vertNum);
     glGenBuffers(1,&cubeBufferArray);

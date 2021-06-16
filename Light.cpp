@@ -18,30 +18,30 @@ const char* GetParam(LightType type, std::string str, int ID){
     return s.c_str();
 }
 
-void Light::ApplyToShader(Shader &shader, int ID) {
-    shader.setVec3(GetParam(type,"ambient",ID),ambient);
-    shader.setVec3(GetParam(type,"diffuse",ID),diffuse);
-    shader.setVec3(GetParam(type,"specular",ID),specular);
+void Light::ApplyToShader(Shader &shader) {
+    shader.setVec3(GetParam(type,"ambient",_id),ambient);
+    shader.setVec3(GetParam(type,"diffuse",_id),diffuse);
+    shader.setVec3(GetParam(type,"specular",_id),specular);
     switch(type){
         case SPOT:
-            shader.setVec3(GetParam(type,"position",ID),position);
-            shader.setVec3(GetParam(type,"direction",ID),direction);
-            shader.setFloat(GetParam(type,"constant",ID),constant);
-            shader.setFloat(GetParam(type,"linear",ID),linear);
-            shader.setFloat(GetParam(type,"quadratic",ID),quadratic);
-            shader.setFloat(GetParam(type,"cutOff",ID),cutOff);
-            shader.setFloat(GetParam(type,"outerCutOff",ID),outerCutOff);
+            shader.setVec3(GetParam(type,"position",_id),position);
+            shader.setVec3(GetParam(type,"direction",_id),direction);
+            shader.setFloat(GetParam(type,"constant",_id),constant);
+            shader.setFloat(GetParam(type,"linear",_id),linear);
+            shader.setFloat(GetParam(type,"quadratic",_id),quadratic);
+            shader.setFloat(GetParam(type,"cutOff",_id),cutOff);
+            shader.setFloat(GetParam(type,"outerCutOff",_id),outerCutOff);
             break;
         case POINT:
-            shader.setVec3(GetParam(type,"position",ID),position);
+            shader.setVec3(GetParam(type,"position",_id),position);
 
-            shader.setFloat(GetParam(type,"constant",ID),constant);
-            shader.setFloat(GetParam(type,"linear",ID),linear);
-            shader.setFloat(GetParam(type,"quadratic",ID),quadratic);
+            shader.setFloat(GetParam(type,"constant",_id),constant);
+            shader.setFloat(GetParam(type,"linear",_id),linear);
+            shader.setFloat(GetParam(type,"quadratic",_id),quadratic);
 
             break;
         case DIRECTIONAL:
-            shader.setVec3(GetParam(type,"direction",ID),direction);
+            shader.setVec3(GetParam(type,"direction",_id),direction);
             break;
     }
 }
@@ -63,7 +63,7 @@ void Light::AddToShader(Shader *shader) {
             break;
     }
     this->_id = id;
-    ApplyToShader(*shader,id);
+    ApplyToShader(*shader);
 }
 
 void Light::ChangePosition(Shader& shader, glm::vec3 newPos) {

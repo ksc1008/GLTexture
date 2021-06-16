@@ -9,9 +9,9 @@
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 #include "glm/gtc/type_ptr.hpp"
+#include "header/OBJ_Loader.h"
 
 #include "header/Material.h"
-#include "header/Light.h"
 #include "header/MVP.h"
 bool firstMouse = true;
 double lastX = WIN_WIDTH;
@@ -60,11 +60,11 @@ void MainDisplay(){
     glClearColor(.2f,0,0,1);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    //Light Mateiral 인자 설정
-
     FlashLight->direction = camera.Front;
     FlashLight->position = camera.Position;
-    FlashLight->ApplyToShader(*MainShader,FlashLight->_id);
+    FlashLight->ApplyToShader(*MainShader);
+    PointLight0->ApplyToShader(*MainShader);
+    PointLight1->ApplyToShader(*MainShader);
 
     MainShader->setInt("directionalNum",MainShader->DirectionalNum);
     MainShader->setInt("pointNum",MainShader->PointNum);
@@ -104,7 +104,7 @@ void MainDisplay(){
 
     model = glm::mat4(1);
     model = glm::translate(model,glm::vec3(1,.3,.3));
-    model = glm::scale(model,glm::vec3(.4,.4,.4));
+    model = glm::scale(model,glm::vec3(.4));
     mvp->SetModel(model);
 
     mvp->SetVertexShaderTransform(MainShader->ID);
@@ -121,9 +121,18 @@ void MainDisplay(){
     mvpLight->SetModel(trans);
     LightShader->use();
 
+    LightShader->setVec3("Color",1,0,0);
     mvpLight->SetVertexShaderTransform(LightShader->ID);
 
     glBindVertexArray(lightSourceVAO);
+    glDrawArrays(GL_TRIANGLES,0,36);
+
+    LightShader->setVec3("Color",0,0,1);
+    model = glm::mat4(1);
+    model = glm::translate(model,glm::vec3(.5,.5,2));
+    model = glm::scale(model,glm::vec3(.2));
+    mvpLight->SetModel(model);
+    mvpLight->SetVertexShaderTransform(LightShader->ID);
     glDrawArrays(GL_TRIANGLES,0,36);
     glBindVertexArray(0);
 
@@ -207,6 +216,7 @@ int main(int argc, char**argv) {
     InitShader();
     InitTexture();
     InitObject();
+    InitLights();
     glEnable(GL_DEPTH_TEST);
     glViewport(0, 0, 1280, 720);
     mvp->SetPerspective(glm::radians(45.0f),16.0f/9.0f,0.1f,100.0f);
@@ -216,33 +226,20 @@ int main(int argc, char**argv) {
     view = glm::translate(view,glm::vec3(0.0f,0.0f,-3.0f));
     mvp->SetView(view);
 
-    FlashLight = new Light();
     sphereMat = new Material();
     containerMat = new Material();
 
     sphereMat->SetDiffuseColor(0.8,0.8,0.2);
     sphereMat->SetSpecularColor(1,1,1);
-    sphereMat->SetShininess(40);
+    sphereMat->SetShininess(100);
 
     containerMat->SetDiffuseMap(0);
     containerMat->SetSpecularMap(1);
     containerMat->SetShininess(25.6f);
 
-    FlashLight->type = SPOT;
-    FlashLight->constant = 1.0;
-    FlashLight->linear = 0.14;
-    FlashLight->quadratic = 0.07;
-    FlashLight->ambient = glm::vec3(.1f,.1f,.1f);
-    FlashLight->specular = glm::vec3(1.0f,1.0f,1.0f);
-    FlashLight->diffuse = glm::vec3(1,1,1);
-    FlashLight->direction = glm::vec3(camera.Front);
-    FlashLight->position = glm::vec3(camera.Position);
-    FlashLight->cutOff = glm::cos(glm::radians(12.5f));
-    FlashLight->outerCutOff = glm::cos(glm::radians(17.5f));
     MainShader->setInt("directionalNum",MainShader->DirectionalNum);
     MainShader->setInt("pointNum",MainShader->PointNum);
     MainShader->setInt("spotNum",MainShader->SpotNum);
-    FlashLight->AddToShader(MainShader);
 
     while(!glfwWindowShouldClose(window))
     {

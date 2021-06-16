@@ -26,7 +26,7 @@ public :
     float linear;
     float quadratic;
 
-    void ApplyToShader(Shader& shader, int ID);
+    void ApplyToShader(Shader& shader);
     void AddToShader(Shader* shader);
 
     void ChangePosition(Shader& shader, glm::vec3 newPos);

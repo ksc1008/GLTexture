@@ -1496,6 +1496,18 @@ C:/GLTexture/header/Shader.h
 ../glm/glm.hpp
 C:/GLTexture/glm/glm.hpp
 
+C:/GLTexture/header/OBJ_Loader.h
+iostream
+-
+vector
+-
+string
+-
+fstream
+-
+math.h
+-
+
 C:/GLTexture/header/Shader.h
 glad/glad.h
 -
@@ -1529,6 +1541,8 @@ Texture.h
 C:/GLTexture/header/Texture.h
 Shader.h
 C:/GLTexture/header/Shader.h
+Light.h
+C:/GLTexture/header/Light.h
 
 C:/GLTexture/header/stb_image.h
 stb_image.h
@@ -1579,10 +1593,10 @@ glm/gtc/matrix_transform.hpp
 C:/GLTexture/glm/gtc/matrix_transform.hpp
 glm/gtc/type_ptr.hpp
 C:/GLTexture/glm/gtc/type_ptr.hpp
+header/OBJ_Loader.h
+C:/GLTexture/header/OBJ_Loader.h
 header/Material.h
 C:/GLTexture/header/Material.h
-header/Light.h
-C:/GLTexture/header/Light.h
 header/MVP.h
 C:/GLTexture/header/MVP.h
 

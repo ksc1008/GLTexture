@@ -137,6 +137,9 @@
 		<Unit filename="C:/GLTexture/header/Material.h">
 			<Option target="GLTexture"/>
 		</Unit>
+		<Unit filename="C:/GLTexture/header/OBJ_Loader.h">
+			<Option target="GLTexture"/>
+		</Unit>
 		<Unit filename="C:/GLTexture/header/Shader.h">
 			<Option target="GLTexture"/>
 		</Unit>

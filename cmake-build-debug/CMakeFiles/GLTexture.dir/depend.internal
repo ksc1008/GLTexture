@@ -328,6 +328,7 @@ CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj
  C:/GLTexture/glm/vec3.hpp
  C:/GLTexture/glm/vec4.hpp
  C:/GLTexture/glm/vector_relational.hpp
+ C:/GLTexture/header/Light.h
  C:/GLTexture/header/Shader.h
  C:/GLTexture/header/Texture.h
  C:/GLTexture/header/mainheader.h
@@ -487,6 +488,7 @@ CMakeFiles/GLTexture.dir/Initiation.cpp.obj
  C:/GLTexture/glm/vec3.hpp
  C:/GLTexture/glm/vec4.hpp
  C:/GLTexture/glm/vector_relational.hpp
+ C:/GLTexture/header/Light.h
  C:/GLTexture/header/Shader.h
  C:/GLTexture/header/Texture.h
  C:/GLTexture/header/mainheader.h
@@ -646,6 +648,7 @@ CMakeFiles/GLTexture.dir/Input.cpp.obj
  C:/GLTexture/glm/vec3.hpp
  C:/GLTexture/glm/vec4.hpp
  C:/GLTexture/glm/vector_relational.hpp
+ C:/GLTexture/header/Light.h
  C:/GLTexture/header/Shader.h
  C:/GLTexture/header/Texture.h
  C:/GLTexture/header/mainheader.h
@@ -1540,6 +1543,7 @@ CMakeFiles/GLTexture.dir/VertexData.cpp.obj
  C:/GLTexture/glm/vec3.hpp
  C:/GLTexture/glm/vec4.hpp
  C:/GLTexture/glm/vector_relational.hpp
+ C:/GLTexture/header/Light.h
  C:/GLTexture/header/Shader.h
  C:/GLTexture/header/Texture.h
  C:/GLTexture/header/mainheader.h
@@ -1752,6 +1756,7 @@ CMakeFiles/GLTexture.dir/main.cpp.obj
  C:/GLTexture/header/Light.h
  C:/GLTexture/header/MVP.h
  C:/GLTexture/header/Material.h
+ C:/GLTexture/header/OBJ_Loader.h
  C:/GLTexture/header/Shader.h
  C:/GLTexture/header/Texture.h
  C:/GLTexture/header/mainheader.h
