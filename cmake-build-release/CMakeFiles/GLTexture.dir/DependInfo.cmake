@@ -21,6 +21,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/GLTexture/Light.cpp" "C:/GLTexture/cmake-build-release/CMakeFiles/GLTexture.dir/Light.cpp.obj"
   "C:/GLTexture/MVP.cpp" "C:/GLTexture/cmake-build-release/CMakeFiles/GLTexture.dir/MVP.cpp.obj"
   "C:/GLTexture/Material.cpp" "C:/GLTexture/cmake-build-release/CMakeFiles/GLTexture.dir/Material.cpp.obj"
+  "C:/GLTexture/Mesh.cpp" "C:/GLTexture/cmake-build-release/CMakeFiles/GLTexture.dir/Mesh.cpp.obj"
   "C:/GLTexture/Shader.cpp" "C:/GLTexture/cmake-build-release/CMakeFiles/GLTexture.dir/Shader.cpp.obj"
   "C:/GLTexture/Texture.cpp" "C:/GLTexture/cmake-build-release/CMakeFiles/GLTexture.dir/Texture.cpp.obj"
   "C:/GLTexture/VertexData.cpp" "C:/GLTexture/cmake-build-release/CMakeFiles/GLTexture.dir/VertexData.cpp.obj"

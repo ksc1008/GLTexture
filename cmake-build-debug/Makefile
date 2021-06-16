@@ -342,6 +342,33 @@ Material.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Material.cpp.s
 .PHONY : Material.cpp.s
 
+Mesh.obj: Mesh.cpp.obj
+
+.PHONY : Mesh.obj
+
+# target to build an object file
+Mesh.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Mesh.cpp.obj
+.PHONY : Mesh.cpp.obj
+
+Mesh.i: Mesh.cpp.i
+
+.PHONY : Mesh.i
+
+# target to preprocess a source file
+Mesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Mesh.cpp.i
+.PHONY : Mesh.cpp.i
+
+Mesh.s: Mesh.cpp.s
+
+.PHONY : Mesh.s
+
+# target to generate assembly for a file
+Mesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Mesh.cpp.s
+.PHONY : Mesh.cpp.s
+
 Shader.obj: Shader.cpp.obj
 
 .PHONY : Shader.obj
@@ -508,6 +535,9 @@ help:
 	@echo ... Material.obj
 	@echo ... Material.i
 	@echo ... Material.s
+	@echo ... Mesh.obj
+	@echo ... Mesh.i
+	@echo ... Mesh.s
 	@echo ... Shader.obj
 	@echo ... Shader.i
 	@echo ... Shader.s

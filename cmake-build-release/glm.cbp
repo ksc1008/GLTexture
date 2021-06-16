@@ -116,6 +116,9 @@
 		<Unit filename="C:/GLTexture/Material.cpp">
 			<Option target="GLTexture"/>
 		</Unit>
+		<Unit filename="C:/GLTexture/Mesh.cpp">
+			<Option target="GLTexture"/>
+		</Unit>
 		<Unit filename="C:/GLTexture/Shader.cpp">
 			<Option target="GLTexture"/>
 		</Unit>
@@ -135,6 +138,9 @@
 			<Option target="GLTexture"/>
 		</Unit>
 		<Unit filename="C:/GLTexture/header/Material.h">
+			<Option target="GLTexture"/>
+		</Unit>
+		<Unit filename="C:/GLTexture/header/Mesh.h">
 			<Option target="GLTexture"/>
 		</Unit>
 		<Unit filename="C:/GLTexture/header/OBJ_Loader.h">
