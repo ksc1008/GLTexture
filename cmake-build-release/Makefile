@@ -153,33 +153,6 @@ GLTexture/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/build
 .PHONY : GLTexture/fast
 
-Camera.obj: Camera.cpp.obj
-
-.PHONY : Camera.obj
-
-# target to build an object file
-Camera.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Camera.cpp.obj
-.PHONY : Camera.cpp.obj
-
-Camera.i: Camera.cpp.i
-
-.PHONY : Camera.i
-
-# target to preprocess a source file
-Camera.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Camera.cpp.i
-.PHONY : Camera.cpp.i
-
-Camera.s: Camera.cpp.s
-
-.PHONY : Camera.s
-
-# target to generate assembly for a file
-Camera.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Camera.cpp.s
-.PHONY : Camera.cpp.s
-
 CreateSphere.obj: CreateSphere.cpp.obj
 
 .PHONY : CreateSphere.obj
@@ -369,6 +342,33 @@ Mesh.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Mesh.cpp.s
 .PHONY : Mesh.cpp.s
 
+Model.obj: Model.cpp.obj
+
+.PHONY : Model.obj
+
+# target to build an object file
+Model.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Model.cpp.obj
+.PHONY : Model.cpp.obj
+
+Model.i: Model.cpp.i
+
+.PHONY : Model.i
+
+# target to preprocess a source file
+Model.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Model.cpp.i
+.PHONY : Model.cpp.i
+
+Model.s: Model.cpp.s
+
+.PHONY : Model.s
+
+# target to generate assembly for a file
+Model.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Model.cpp.s
+.PHONY : Model.cpp.s
+
 Shader.obj: Shader.cpp.obj
 
 .PHONY : Shader.obj
@@ -396,33 +396,6 @@ Shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Shader.cpp.s
 .PHONY : Shader.cpp.s
 
-Texture.obj: Texture.cpp.obj
-
-.PHONY : Texture.obj
-
-# target to build an object file
-Texture.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Texture.cpp.obj
-.PHONY : Texture.cpp.obj
-
-Texture.i: Texture.cpp.i
-
-.PHONY : Texture.i
-
-# target to preprocess a source file
-Texture.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Texture.cpp.i
-.PHONY : Texture.cpp.i
-
-Texture.s: Texture.cpp.s
-
-.PHONY : Texture.s
-
-# target to generate assembly for a file
-Texture.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/Texture.cpp.s
-.PHONY : Texture.cpp.s
-
 VertexData.obj: VertexData.cpp.obj
 
 .PHONY : VertexData.obj
@@ -449,6 +422,33 @@ VertexData.s: VertexData.cpp.s
 VertexData.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/VertexData.cpp.s
 .PHONY : VertexData.cpp.s
+
+_Texture.obj: _Texture.cpp.obj
+
+.PHONY : _Texture.obj
+
+# target to build an object file
+_Texture.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/_Texture.cpp.obj
+.PHONY : _Texture.cpp.obj
+
+_Texture.i: _Texture.cpp.i
+
+.PHONY : _Texture.i
+
+# target to preprocess a source file
+_Texture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/_Texture.cpp.i
+.PHONY : _Texture.cpp.i
+
+_Texture.s: _Texture.cpp.s
+
+.PHONY : _Texture.s
+
+# target to generate assembly for a file
+_Texture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLTexture.dir\build.make CMakeFiles/GLTexture.dir/_Texture.cpp.s
+.PHONY : _Texture.cpp.s
 
 glad.obj: glad.c.obj
 
@@ -514,9 +514,6 @@ help:
 	@echo ... rebuild_cache
 	@echo ... test
 	@echo ... GLTexture
-	@echo ... Camera.obj
-	@echo ... Camera.i
-	@echo ... Camera.s
 	@echo ... CreateSphere.obj
 	@echo ... CreateSphere.i
 	@echo ... CreateSphere.s
@@ -538,15 +535,18 @@ help:
 	@echo ... Mesh.obj
 	@echo ... Mesh.i
 	@echo ... Mesh.s
+	@echo ... Model.obj
+	@echo ... Model.i
+	@echo ... Model.s
 	@echo ... Shader.obj
 	@echo ... Shader.i
 	@echo ... Shader.s
-	@echo ... Texture.obj
-	@echo ... Texture.i
-	@echo ... Texture.s
 	@echo ... VertexData.obj
 	@echo ... VertexData.i
 	@echo ... VertexData.s
+	@echo ... _Texture.obj
+	@echo ... _Texture.i
+	@echo ... _Texture.s
 	@echo ... glad.obj
 	@echo ... glad.i
 	@echo ... glad.s

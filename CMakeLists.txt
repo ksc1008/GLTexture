@@ -1,6 +1,11 @@
 cmake_minimum_required(VERSION 3.17)
 project(GLTexture)
 
+file(GLOB ROOT_CPP *.cpp)
+file(GLOB ROOT_C *.c)
+file(GLOB ROOT_HEADER *.h)
+file(GLOB HEADER_FILES header/*.h)
+
 include_directories(include)
 link_directories(lib/x64)
 link_directories(lib)
@@ -8,7 +13,8 @@ link_directories(lib)
 set(CMAKE_CXX_STANDARD 14)
 
 
-add_executable(GLTexture main.cpp glad.c header/mainheader.h Initiation.cpp Shader.cpp header/Shader.h header/stb_image.h Texture.cpp header/Texture.h MVP.cpp header/MVP.h Input.cpp Camera.cpp Camera.h CreateSphere.cpp VertexData.cpp Light.cpp header/Light.h Material.cpp header/Material.h header/OBJ_Loader.h Mesh.cpp header/Mesh.h)
+#add_executable(GLTexture main.cpp glad.c header/mainheader.h Initiation.cpp Shader.cpp header/Shader.h header/stb_image.h _Texture.cpp header/_Texture.h MVP.cpp header/MVP.h Input.cpp Camera.cpp Camera.h CreateSphere.cpp VertexData.cpp Light.cpp header/Light.h Material.cpp header/Material.h header/OBJ_Loader.h Mesh.cpp header/Mesh.h Model.cpp header/Model.h)
+add_executable(GLTexture ${ROOT_CPP} ${ROOT_HEADER} ${HEADER_FILES} ${ROOT_C})
 target_link_libraries(GLTexture libopengl32.a  libfreeglut.a glu32.dll glfw3)
 
 cmake_minimum_required(VERSION 3.2 FATAL_ERROR)

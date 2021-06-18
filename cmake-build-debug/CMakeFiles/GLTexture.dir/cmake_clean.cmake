@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/GLTexture.dir/Camera.cpp.obj"
   "CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj"
   "CMakeFiles/GLTexture.dir/Initiation.cpp.obj"
   "CMakeFiles/GLTexture.dir/Input.cpp.obj"
@@ -7,9 +6,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/GLTexture.dir/MVP.cpp.obj"
   "CMakeFiles/GLTexture.dir/Material.cpp.obj"
   "CMakeFiles/GLTexture.dir/Mesh.cpp.obj"
+  "CMakeFiles/GLTexture.dir/Model.cpp.obj"
   "CMakeFiles/GLTexture.dir/Shader.cpp.obj"
-  "CMakeFiles/GLTexture.dir/Texture.cpp.obj"
   "CMakeFiles/GLTexture.dir/VertexData.cpp.obj"
+  "CMakeFiles/GLTexture.dir/_Texture.cpp.obj"
   "CMakeFiles/GLTexture.dir/glad.c.obj"
   "CMakeFiles/GLTexture.dir/main.cpp.obj"
   "GLTexture.exe"

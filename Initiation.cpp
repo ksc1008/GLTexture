@@ -1,10 +1,10 @@
 #include "header/mainheader.h"
-#include "header/Texture.h"
+#include "header/_Texture.h"
 
-Texture texture0 = Texture("textures/Dirt.png");
-Texture texture1 = Texture("textures/awesomeface.png", GL_RGBA);
-Texture texture2 = Texture("textures/container2.png",GL_RGBA);
-Texture texture3 = Texture("textures/container2_specular.png",GL_RGBA);
+_Texture texture0 = _Texture("textures/Dirt.png");
+_Texture texture1 = _Texture("textures/awesomeface.png", GL_RGBA);
+_Texture texture2 = _Texture("textures/container2.png", GL_RGBA);
+_Texture texture3 = _Texture("textures/container2_specular.png", GL_RGBA);
 
 unsigned int cubeBufferArray;
 unsigned int cubeBufferObject;
@@ -28,6 +28,7 @@ void InitShader(){
     MainShader = new Shader("shaders/4.vShaderMultipleLights.glsl","shaders/4.fShaderMultipleLights.glsl");
     TextureShader = new Shader("shaders/3.vShaderFlashLight.glsl","shaders/3.fShaderFlashLight.glsl");
     LightShader = new Shader("shaders/vLightingShader.glsl","shaders/fLightSourceShader.glsl");
+    ModelShader = new Shader("shaders/5.vShaderWithMesh.glsl","shaders/5.fShaderWithMesh.glsl");
 }
 
 void InitLights(){
@@ -63,8 +64,11 @@ void InitLights(){
     PointLight1->diffuse = glm::vec3(0,0,1);
     PointLight1->position = glm::vec3(0.5,0.5,2);
     FlashLight->AddToShader(MainShader);
+    FlashLight->AddToShader(ModelShader);
     PointLight0->AddToShader(MainShader);
+    PointLight0->AddToShader(ModelShader);
     PointLight1->AddToShader(MainShader);
+    PointLight1->AddToShader(ModelShader);
 }
 
 void InitObject(){

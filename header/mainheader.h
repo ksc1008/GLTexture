@@ -1,20 +1,19 @@
 #ifndef GLTEXTURE_MAINHEADER_H
 #define GLTEXTURE_MAINHEADER_H
 
-#define STB_IMAGE_IMPLEMENTATION
-
 #include <iostream>
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
-#include "Texture.h"
+#include "_Texture.h"
 #include "Shader.h"
 #include "Light.h"
+#include "Model.h"
 
 void InitGlfw();
-extern Texture texture0;
-extern Texture texture2;
-extern Texture texture1;
-extern Texture texture3;
+extern _Texture texture0;
+extern _Texture texture2;
+extern _Texture texture1;
+extern _Texture texture3;
 extern double deltaTime;
 extern float Rot;
 extern unsigned int cubeBufferArray;
@@ -37,6 +36,7 @@ extern Shader* LightingShader;
 extern Shader* LightShader;
 extern Shader* TextureShader;
 extern Shader* MainShader;
+extern Shader* ModelShader;
 
 extern Light* FlashLight;
 extern Light* PointLight0;

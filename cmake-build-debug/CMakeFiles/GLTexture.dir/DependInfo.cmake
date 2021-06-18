@@ -14,7 +14,6 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../include"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/GLTexture/Camera.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/Camera.cpp.obj"
   "C:/GLTexture/CreateSphere.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj"
   "C:/GLTexture/Initiation.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/Initiation.cpp.obj"
   "C:/GLTexture/Input.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/Input.cpp.obj"
@@ -22,9 +21,10 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/GLTexture/MVP.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/MVP.cpp.obj"
   "C:/GLTexture/Material.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/Material.cpp.obj"
   "C:/GLTexture/Mesh.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/Mesh.cpp.obj"
+  "C:/GLTexture/Model.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/Model.cpp.obj"
   "C:/GLTexture/Shader.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/Shader.cpp.obj"
-  "C:/GLTexture/Texture.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/Texture.cpp.obj"
   "C:/GLTexture/VertexData.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/VertexData.cpp.obj"
+  "C:/GLTexture/_Texture.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/_Texture.cpp.obj"
   "C:/GLTexture/main.cpp" "C:/GLTexture/cmake-build-debug/CMakeFiles/GLTexture.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

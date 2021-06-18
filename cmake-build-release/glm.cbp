@@ -92,9 +92,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/GLTexture/Camera.cpp">
-			<Option target="GLTexture"/>
-		</Unit>
 		<Unit filename="C:/GLTexture/Camera.h">
 			<Option target="GLTexture"/>
 		</Unit>
@@ -119,13 +116,16 @@
 		<Unit filename="C:/GLTexture/Mesh.cpp">
 			<Option target="GLTexture"/>
 		</Unit>
+		<Unit filename="C:/GLTexture/Model.cpp">
+			<Option target="GLTexture"/>
+		</Unit>
 		<Unit filename="C:/GLTexture/Shader.cpp">
 			<Option target="GLTexture"/>
 		</Unit>
-		<Unit filename="C:/GLTexture/Texture.cpp">
+		<Unit filename="C:/GLTexture/VertexData.cpp">
 			<Option target="GLTexture"/>
 		</Unit>
-		<Unit filename="C:/GLTexture/VertexData.cpp">
+		<Unit filename="C:/GLTexture/_Texture.cpp">
 			<Option target="GLTexture"/>
 		</Unit>
 		<Unit filename="C:/GLTexture/glad.c">
@@ -143,13 +143,16 @@
 		<Unit filename="C:/GLTexture/header/Mesh.h">
 			<Option target="GLTexture"/>
 		</Unit>
+		<Unit filename="C:/GLTexture/header/Model.h">
+			<Option target="GLTexture"/>
+		</Unit>
 		<Unit filename="C:/GLTexture/header/OBJ_Loader.h">
 			<Option target="GLTexture"/>
 		</Unit>
 		<Unit filename="C:/GLTexture/header/Shader.h">
 			<Option target="GLTexture"/>
 		</Unit>
-		<Unit filename="C:/GLTexture/header/Texture.h">
+		<Unit filename="C:/GLTexture/header/_Texture.h">
 			<Option target="GLTexture"/>
 		</Unit>
 		<Unit filename="C:/GLTexture/header/mainheader.h">

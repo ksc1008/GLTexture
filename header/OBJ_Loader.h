@@ -1,6 +1,6 @@
 // OBJ_Loader.h - A Single Header OBJ Model Loader
-
-#pragma once
+#ifndef OBJ_LOADER_H
+#define OBJ_LOADER_H
 
 // Iostream - STD I/O Library
 #include <iostream>
@@ -18,7 +18,7 @@
 #include <math.h>
 
 // Print progress to console while loading (large models)
-#define OBJL_CONSOLE_OUTPUT
+//#define OBJL_CONSOLE_OUTPUT
 
 // Namespace: OBJL
 //
@@ -133,7 +133,7 @@ namespace objl
 	// Structure: Vertex
 	//
 	// Description: Model Vertex object that holds
-	//	a Position, Normal, and Texture Coordinate
+	//	a Position, Normal, and _Texture Coordinate
 	struct Vertex
 	{
 		// Position Vector
@@ -142,7 +142,7 @@ namespace objl
 		// Normal Vector
 		Vector3 Normal;
 
-		// Texture Coordinate Vector
+		// _Texture Coordinate Vector
 		Vector2 TextureCoordinate;
 	};
 
@@ -173,15 +173,15 @@ namespace objl
 		float d;
 		// Illumination
 		int illum;
-		// Ambient Texture Map
+		// Ambient _Texture Map
 		std::string map_Ka;
-		// Diffuse Texture Map
+		// Diffuse _Texture Map
 		std::string map_Kd;
-		// Specular Texture Map
+		// Specular _Texture Map
 		std::string map_Ks;
 		// Specular Hightlight Map
 		std::string map_Ns;
-		// Alpha Texture Map
+		// Alpha _Texture Map
 		std::string map_d;
 		// Bump Map
 		std::string map_bump;
@@ -222,7 +222,7 @@ namespace objl
 	namespace math
 	{
 		// Vector3 Cross Product
-		Vector3 CrossV3(const Vector3 a, const Vector3 b)
+        inline Vector3 CrossV3(const Vector3 a, const Vector3 b)
 		{
 			return Vector3(a.Y * b.Z - a.Z * b.Y,
 				a.Z * b.X - a.X * b.Z,
@@ -230,19 +230,19 @@ namespace objl
 		}
 
 		// Vector3 Magnitude Calculation
-		float MagnitudeV3(const Vector3 in)
+        inline float MagnitudeV3(const Vector3 in)
 		{
 			return (sqrtf(powf(in.X, 2) + powf(in.Y, 2) + powf(in.Z, 2)));
 		}
 
 		// Vector3 DotProduct
-		float DotV3(const Vector3 a, const Vector3 b)
+        inline float DotV3(const Vector3 a, const Vector3 b)
 		{
 			return (a.X * b.X) + (a.Y * b.Y) + (a.Z * b.Z);
 		}
 
 		// Angle between 2 Vector3 Objects
-		float AngleBetweenV3(const Vector3 a, const Vector3 b)
+        inline float AngleBetweenV3(const Vector3 a, const Vector3 b)
 		{
 			float angle = DotV3(a, b);
 			angle /= (MagnitudeV3(a) * MagnitudeV3(b));
@@ -250,7 +250,7 @@ namespace objl
 		}
 
 		// Projection Calculation of a onto b
-		Vector3 ProjV3(const Vector3 a, const Vector3 b)
+        inline Vector3 ProjV3(const Vector3 a, const Vector3 b)
 		{
 			Vector3 bn = b / MagnitudeV3(b);
 			return bn * DotV3(a, bn);
@@ -264,13 +264,13 @@ namespace objl
 	namespace algorithm
 	{
 		// Vector3 Multiplication Opertor Overload
-		Vector3 operator*(const float& left, const Vector3& right)
+        inline Vector3 operator*(const float& left, const Vector3& right)
 		{
 			return Vector3(right.X * left, right.Y * left, right.Z * left);
 		}
 
 		// A test to see if P1 is on the same side as P2 of a line segment ab
-		bool SameSide(Vector3 p1, Vector3 p2, Vector3 a, Vector3 b)
+        inline bool SameSide(Vector3 p1, Vector3 p2, Vector3 a, Vector3 b)
 		{
 			Vector3 cp1 = math::CrossV3(b - a, p1 - a);
 			Vector3 cp2 = math::CrossV3(b - a, p2 - a);
@@ -282,7 +282,7 @@ namespace objl
 		}
 
 		// Generate a cross produect normal for a triangle
-		Vector3 GenTriNormal(Vector3 t1, Vector3 t2, Vector3 t3)
+        inline Vector3 GenTriNormal(Vector3 t1, Vector3 t2, Vector3 t3)
 		{
 			Vector3 u = t2 - t1;
 			Vector3 v = t3 - t1;
@@ -293,7 +293,7 @@ namespace objl
 		}
 
 		// Check to see if a Vector3 Point is within a 3 Vector3 Triangle
-		bool inTriangle(Vector3 point, Vector3 tri1, Vector3 tri2, Vector3 tri3)
+        inline bool inTriangle(Vector3 point, Vector3 tri1, Vector3 tri2, Vector3 tri3)
 		{
 			// Test to see if it is within an infinite prism that the triangle outlines.
 			bool within_tri_prisim = SameSide(point, tri1, tri2, tri3) && SameSide(point, tri2, tri1, tri3)
@@ -548,7 +548,7 @@ namespace objl
 
 					Positions.push_back(vpos);
 				}
-				// Generate a Vertex Texture Coordinate
+				// Generate a Vertex _Texture Coordinate
 				if (algorithm::firstToken(curline) == "vt")
 				{
 					std::vector<std::string> stex;
@@ -754,17 +754,17 @@ namespace objl
 				// Check for position & texture - v1/vt1
 				if (svert.size() == 2)
 				{
-					// Position & Texture
+					// Position & _Texture
 					vtype = 2;
 				}
 
-				// Check for Position, Texture and Normal - v1/vt1/vn1
+				// Check for Position, _Texture and Normal - v1/vt1/vn1
 				// or if Position and Normal - v1//vn1
 				if (svert.size() == 3)
 				{
 					if (svert[1] != "")
 					{
-						// Position, Texture, and Normal
+						// Position, _Texture, and Normal
 						vtype = 4;
 					}
 					else
@@ -1118,17 +1118,17 @@ namespace objl
 				{
 					tempMaterial.illum = std::stoi(algorithm::tail(curline));
 				}
-				// Ambient Texture Map
+				// Ambient _Texture Map
 				if (algorithm::firstToken(curline) == "map_Ka")
 				{
 					tempMaterial.map_Ka = algorithm::tail(curline);
 				}
-				// Diffuse Texture Map
+				// Diffuse _Texture Map
 				if (algorithm::firstToken(curline) == "map_Kd")
 				{
 					tempMaterial.map_Kd = algorithm::tail(curline);
 				}
-				// Specular Texture Map
+				// Specular _Texture Map
 				if (algorithm::firstToken(curline) == "map_Ks")
 				{
 					tempMaterial.map_Ks = algorithm::tail(curline);
@@ -1138,7 +1138,7 @@ namespace objl
 				{
 					tempMaterial.map_Ns = algorithm::tail(curline);
 				}
-				// Alpha Texture Map
+				// Alpha _Texture Map
 				if (algorithm::firstToken(curline) == "map_d")
 				{
 					tempMaterial.map_d = algorithm::tail(curline);
@@ -1165,3 +1165,5 @@ namespace objl
 		}
 	};
 }
+
+#endif

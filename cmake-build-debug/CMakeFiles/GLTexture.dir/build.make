@@ -76,38 +76,24 @@ include CMakeFiles/GLTexture.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/GLTexture.dir/flags.make
 
-CMakeFiles/GLTexture.dir/main.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
-CMakeFiles/GLTexture.dir/main.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
-CMakeFiles/GLTexture.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GLTexture.dir/main.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\main.cpp.obj -c C:\GLTexture\main.cpp
+CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
+CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
+CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../CreateSphere.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\CreateSphere.cpp.obj -c C:\GLTexture\CreateSphere.cpp
 
-CMakeFiles/GLTexture.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GLTexture.dir/main.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GLTexture\main.cpp > CMakeFiles\GLTexture.dir\main.cpp.i
+CMakeFiles/GLTexture.dir/CreateSphere.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GLTexture.dir/CreateSphere.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GLTexture\CreateSphere.cpp > CMakeFiles\GLTexture.dir\CreateSphere.cpp.i
 
-CMakeFiles/GLTexture.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/main.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\main.cpp -o CMakeFiles\GLTexture.dir\main.cpp.s
-
-CMakeFiles/GLTexture.dir/glad.c.obj: CMakeFiles/GLTexture.dir/flags.make
-CMakeFiles/GLTexture.dir/glad.c.obj: CMakeFiles/GLTexture.dir/includes_C.rsp
-CMakeFiles/GLTexture.dir/glad.c.obj: ../glad.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/GLTexture.dir/glad.c.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\GLTexture.dir\glad.c.obj   -c C:\GLTexture\glad.c
-
-CMakeFiles/GLTexture.dir/glad.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/GLTexture.dir/glad.c.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\GLTexture\glad.c > CMakeFiles\GLTexture.dir\glad.c.i
-
-CMakeFiles/GLTexture.dir/glad.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/GLTexture.dir/glad.c.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\GLTexture\glad.c -o CMakeFiles\GLTexture.dir\glad.c.s
+CMakeFiles/GLTexture.dir/CreateSphere.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/CreateSphere.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\CreateSphere.cpp -o CMakeFiles\GLTexture.dir\CreateSphere.cpp.s
 
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../Initiation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GLTexture.dir/Initiation.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GLTexture.dir/Initiation.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\Initiation.cpp.obj -c C:\GLTexture\Initiation.cpp
 
 CMakeFiles/GLTexture.dir/Initiation.cpp.i: cmake_force
@@ -118,52 +104,10 @@ CMakeFiles/GLTexture.dir/Initiation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/Initiation.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\Initiation.cpp -o CMakeFiles\GLTexture.dir\Initiation.cpp.s
 
-CMakeFiles/GLTexture.dir/Shader.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
-CMakeFiles/GLTexture.dir/Shader.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
-CMakeFiles/GLTexture.dir/Shader.cpp.obj: ../Shader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GLTexture.dir/Shader.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\Shader.cpp.obj -c C:\GLTexture\Shader.cpp
-
-CMakeFiles/GLTexture.dir/Shader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GLTexture.dir/Shader.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GLTexture\Shader.cpp > CMakeFiles\GLTexture.dir\Shader.cpp.i
-
-CMakeFiles/GLTexture.dir/Shader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/Shader.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\Shader.cpp -o CMakeFiles\GLTexture.dir\Shader.cpp.s
-
-CMakeFiles/GLTexture.dir/Texture.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
-CMakeFiles/GLTexture.dir/Texture.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
-CMakeFiles/GLTexture.dir/Texture.cpp.obj: ../Texture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GLTexture.dir/Texture.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\Texture.cpp.obj -c C:\GLTexture\Texture.cpp
-
-CMakeFiles/GLTexture.dir/Texture.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GLTexture.dir/Texture.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GLTexture\Texture.cpp > CMakeFiles\GLTexture.dir\Texture.cpp.i
-
-CMakeFiles/GLTexture.dir/Texture.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/Texture.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\Texture.cpp -o CMakeFiles\GLTexture.dir\Texture.cpp.s
-
-CMakeFiles/GLTexture.dir/MVP.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
-CMakeFiles/GLTexture.dir/MVP.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
-CMakeFiles/GLTexture.dir/MVP.cpp.obj: ../MVP.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GLTexture.dir/MVP.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\MVP.cpp.obj -c C:\GLTexture\MVP.cpp
-
-CMakeFiles/GLTexture.dir/MVP.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GLTexture.dir/MVP.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GLTexture\MVP.cpp > CMakeFiles\GLTexture.dir\MVP.cpp.i
-
-CMakeFiles/GLTexture.dir/MVP.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/MVP.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\MVP.cpp -o CMakeFiles\GLTexture.dir\MVP.cpp.s
-
 CMakeFiles/GLTexture.dir/Input.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
 CMakeFiles/GLTexture.dir/Input.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../Input.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GLTexture.dir/Input.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GLTexture.dir/Input.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\Input.cpp.obj -c C:\GLTexture\Input.cpp
 
 CMakeFiles/GLTexture.dir/Input.cpp.i: cmake_force
@@ -174,33 +118,89 @@ CMakeFiles/GLTexture.dir/Input.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/Input.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\Input.cpp -o CMakeFiles\GLTexture.dir\Input.cpp.s
 
-CMakeFiles/GLTexture.dir/Camera.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
-CMakeFiles/GLTexture.dir/Camera.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
-CMakeFiles/GLTexture.dir/Camera.cpp.obj: ../Camera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/GLTexture.dir/Camera.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\Camera.cpp.obj -c C:\GLTexture\Camera.cpp
+CMakeFiles/GLTexture.dir/Light.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
+CMakeFiles/GLTexture.dir/Light.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
+CMakeFiles/GLTexture.dir/Light.cpp.obj: ../Light.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GLTexture.dir/Light.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\Light.cpp.obj -c C:\GLTexture\Light.cpp
 
-CMakeFiles/GLTexture.dir/Camera.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GLTexture.dir/Camera.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GLTexture\Camera.cpp > CMakeFiles\GLTexture.dir\Camera.cpp.i
+CMakeFiles/GLTexture.dir/Light.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GLTexture.dir/Light.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GLTexture\Light.cpp > CMakeFiles\GLTexture.dir\Light.cpp.i
 
-CMakeFiles/GLTexture.dir/Camera.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/Camera.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\Camera.cpp -o CMakeFiles\GLTexture.dir\Camera.cpp.s
+CMakeFiles/GLTexture.dir/Light.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/Light.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\Light.cpp -o CMakeFiles\GLTexture.dir\Light.cpp.s
 
-CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
-CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
-CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../CreateSphere.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\CreateSphere.cpp.obj -c C:\GLTexture\CreateSphere.cpp
+CMakeFiles/GLTexture.dir/MVP.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
+CMakeFiles/GLTexture.dir/MVP.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
+CMakeFiles/GLTexture.dir/MVP.cpp.obj: ../MVP.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GLTexture.dir/MVP.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\MVP.cpp.obj -c C:\GLTexture\MVP.cpp
 
-CMakeFiles/GLTexture.dir/CreateSphere.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GLTexture.dir/CreateSphere.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GLTexture\CreateSphere.cpp > CMakeFiles\GLTexture.dir\CreateSphere.cpp.i
+CMakeFiles/GLTexture.dir/MVP.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GLTexture.dir/MVP.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GLTexture\MVP.cpp > CMakeFiles\GLTexture.dir\MVP.cpp.i
 
-CMakeFiles/GLTexture.dir/CreateSphere.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/CreateSphere.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\CreateSphere.cpp -o CMakeFiles\GLTexture.dir\CreateSphere.cpp.s
+CMakeFiles/GLTexture.dir/MVP.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/MVP.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\MVP.cpp -o CMakeFiles\GLTexture.dir\MVP.cpp.s
+
+CMakeFiles/GLTexture.dir/Material.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
+CMakeFiles/GLTexture.dir/Material.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
+CMakeFiles/GLTexture.dir/Material.cpp.obj: ../Material.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GLTexture.dir/Material.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\Material.cpp.obj -c C:\GLTexture\Material.cpp
+
+CMakeFiles/GLTexture.dir/Material.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GLTexture.dir/Material.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GLTexture\Material.cpp > CMakeFiles\GLTexture.dir\Material.cpp.i
+
+CMakeFiles/GLTexture.dir/Material.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/Material.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\Material.cpp -o CMakeFiles\GLTexture.dir\Material.cpp.s
+
+CMakeFiles/GLTexture.dir/Mesh.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
+CMakeFiles/GLTexture.dir/Mesh.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
+CMakeFiles/GLTexture.dir/Mesh.cpp.obj: ../Mesh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GLTexture.dir/Mesh.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\Mesh.cpp.obj -c C:\GLTexture\Mesh.cpp
+
+CMakeFiles/GLTexture.dir/Mesh.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GLTexture.dir/Mesh.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GLTexture\Mesh.cpp > CMakeFiles\GLTexture.dir\Mesh.cpp.i
+
+CMakeFiles/GLTexture.dir/Mesh.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/Mesh.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\Mesh.cpp -o CMakeFiles\GLTexture.dir\Mesh.cpp.s
+
+CMakeFiles/GLTexture.dir/Model.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
+CMakeFiles/GLTexture.dir/Model.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
+CMakeFiles/GLTexture.dir/Model.cpp.obj: ../Model.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/GLTexture.dir/Model.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\Model.cpp.obj -c C:\GLTexture\Model.cpp
+
+CMakeFiles/GLTexture.dir/Model.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GLTexture.dir/Model.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GLTexture\Model.cpp > CMakeFiles\GLTexture.dir\Model.cpp.i
+
+CMakeFiles/GLTexture.dir/Model.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/Model.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\Model.cpp -o CMakeFiles\GLTexture.dir\Model.cpp.s
+
+CMakeFiles/GLTexture.dir/Shader.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
+CMakeFiles/GLTexture.dir/Shader.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
+CMakeFiles/GLTexture.dir/Shader.cpp.obj: ../Shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/GLTexture.dir/Shader.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\Shader.cpp.obj -c C:\GLTexture\Shader.cpp
+
+CMakeFiles/GLTexture.dir/Shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GLTexture.dir/Shader.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GLTexture\Shader.cpp > CMakeFiles\GLTexture.dir\Shader.cpp.i
+
+CMakeFiles/GLTexture.dir/Shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/Shader.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\Shader.cpp -o CMakeFiles\GLTexture.dir\Shader.cpp.s
 
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
@@ -216,80 +216,80 @@ CMakeFiles/GLTexture.dir/VertexData.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/VertexData.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\VertexData.cpp -o CMakeFiles\GLTexture.dir\VertexData.cpp.s
 
-CMakeFiles/GLTexture.dir/Light.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
-CMakeFiles/GLTexture.dir/Light.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
-CMakeFiles/GLTexture.dir/Light.cpp.obj: ../Light.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/GLTexture.dir/Light.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\Light.cpp.obj -c C:\GLTexture\Light.cpp
+CMakeFiles/GLTexture.dir/_Texture.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
+CMakeFiles/GLTexture.dir/_Texture.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
+CMakeFiles/GLTexture.dir/_Texture.cpp.obj: ../_Texture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/GLTexture.dir/_Texture.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\_Texture.cpp.obj -c C:\GLTexture\_Texture.cpp
 
-CMakeFiles/GLTexture.dir/Light.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GLTexture.dir/Light.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GLTexture\Light.cpp > CMakeFiles\GLTexture.dir\Light.cpp.i
+CMakeFiles/GLTexture.dir/_Texture.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GLTexture.dir/_Texture.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GLTexture\_Texture.cpp > CMakeFiles\GLTexture.dir\_Texture.cpp.i
 
-CMakeFiles/GLTexture.dir/Light.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/Light.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\Light.cpp -o CMakeFiles\GLTexture.dir\Light.cpp.s
+CMakeFiles/GLTexture.dir/_Texture.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/_Texture.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\_Texture.cpp -o CMakeFiles\GLTexture.dir\_Texture.cpp.s
 
-CMakeFiles/GLTexture.dir/Material.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
-CMakeFiles/GLTexture.dir/Material.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
-CMakeFiles/GLTexture.dir/Material.cpp.obj: ../Material.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/GLTexture.dir/Material.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\Material.cpp.obj -c C:\GLTexture\Material.cpp
+CMakeFiles/GLTexture.dir/main.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
+CMakeFiles/GLTexture.dir/main.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
+CMakeFiles/GLTexture.dir/main.cpp.obj: ../main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/GLTexture.dir/main.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\main.cpp.obj -c C:\GLTexture\main.cpp
 
-CMakeFiles/GLTexture.dir/Material.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GLTexture.dir/Material.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GLTexture\Material.cpp > CMakeFiles\GLTexture.dir\Material.cpp.i
+CMakeFiles/GLTexture.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GLTexture.dir/main.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GLTexture\main.cpp > CMakeFiles\GLTexture.dir\main.cpp.i
 
-CMakeFiles/GLTexture.dir/Material.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/Material.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\Material.cpp -o CMakeFiles\GLTexture.dir\Material.cpp.s
+CMakeFiles/GLTexture.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/main.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\main.cpp -o CMakeFiles\GLTexture.dir\main.cpp.s
 
-CMakeFiles/GLTexture.dir/Mesh.cpp.obj: CMakeFiles/GLTexture.dir/flags.make
-CMakeFiles/GLTexture.dir/Mesh.cpp.obj: CMakeFiles/GLTexture.dir/includes_CXX.rsp
-CMakeFiles/GLTexture.dir/Mesh.cpp.obj: ../Mesh.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/GLTexture.dir/Mesh.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GLTexture.dir\Mesh.cpp.obj -c C:\GLTexture\Mesh.cpp
+CMakeFiles/GLTexture.dir/glad.c.obj: CMakeFiles/GLTexture.dir/flags.make
+CMakeFiles/GLTexture.dir/glad.c.obj: CMakeFiles/GLTexture.dir/includes_C.rsp
+CMakeFiles/GLTexture.dir/glad.c.obj: ../glad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GLTexture\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/GLTexture.dir/glad.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\GLTexture.dir\glad.c.obj   -c C:\GLTexture\glad.c
 
-CMakeFiles/GLTexture.dir/Mesh.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GLTexture.dir/Mesh.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GLTexture\Mesh.cpp > CMakeFiles\GLTexture.dir\Mesh.cpp.i
+CMakeFiles/GLTexture.dir/glad.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/GLTexture.dir/glad.c.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\GLTexture\glad.c > CMakeFiles\GLTexture.dir\glad.c.i
 
-CMakeFiles/GLTexture.dir/Mesh.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GLTexture.dir/Mesh.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GLTexture\Mesh.cpp -o CMakeFiles\GLTexture.dir\Mesh.cpp.s
+CMakeFiles/GLTexture.dir/glad.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/GLTexture.dir/glad.c.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\GLTexture\glad.c -o CMakeFiles\GLTexture.dir\glad.c.s
 
 # Object files for target GLTexture
 GLTexture_OBJECTS = \
-"CMakeFiles/GLTexture.dir/main.cpp.obj" \
-"CMakeFiles/GLTexture.dir/glad.c.obj" \
-"CMakeFiles/GLTexture.dir/Initiation.cpp.obj" \
-"CMakeFiles/GLTexture.dir/Shader.cpp.obj" \
-"CMakeFiles/GLTexture.dir/Texture.cpp.obj" \
-"CMakeFiles/GLTexture.dir/MVP.cpp.obj" \
-"CMakeFiles/GLTexture.dir/Input.cpp.obj" \
-"CMakeFiles/GLTexture.dir/Camera.cpp.obj" \
 "CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj" \
-"CMakeFiles/GLTexture.dir/VertexData.cpp.obj" \
+"CMakeFiles/GLTexture.dir/Initiation.cpp.obj" \
+"CMakeFiles/GLTexture.dir/Input.cpp.obj" \
 "CMakeFiles/GLTexture.dir/Light.cpp.obj" \
+"CMakeFiles/GLTexture.dir/MVP.cpp.obj" \
 "CMakeFiles/GLTexture.dir/Material.cpp.obj" \
-"CMakeFiles/GLTexture.dir/Mesh.cpp.obj"
+"CMakeFiles/GLTexture.dir/Mesh.cpp.obj" \
+"CMakeFiles/GLTexture.dir/Model.cpp.obj" \
+"CMakeFiles/GLTexture.dir/Shader.cpp.obj" \
+"CMakeFiles/GLTexture.dir/VertexData.cpp.obj" \
+"CMakeFiles/GLTexture.dir/_Texture.cpp.obj" \
+"CMakeFiles/GLTexture.dir/main.cpp.obj" \
+"CMakeFiles/GLTexture.dir/glad.c.obj"
 
 # External object files for target GLTexture
 GLTexture_EXTERNAL_OBJECTS =
 
-GLTexture.exe: CMakeFiles/GLTexture.dir/main.cpp.obj
-GLTexture.exe: CMakeFiles/GLTexture.dir/glad.c.obj
-GLTexture.exe: CMakeFiles/GLTexture.dir/Initiation.cpp.obj
-GLTexture.exe: CMakeFiles/GLTexture.dir/Shader.cpp.obj
-GLTexture.exe: CMakeFiles/GLTexture.dir/Texture.cpp.obj
-GLTexture.exe: CMakeFiles/GLTexture.dir/MVP.cpp.obj
-GLTexture.exe: CMakeFiles/GLTexture.dir/Input.cpp.obj
-GLTexture.exe: CMakeFiles/GLTexture.dir/Camera.cpp.obj
 GLTexture.exe: CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj
-GLTexture.exe: CMakeFiles/GLTexture.dir/VertexData.cpp.obj
+GLTexture.exe: CMakeFiles/GLTexture.dir/Initiation.cpp.obj
+GLTexture.exe: CMakeFiles/GLTexture.dir/Input.cpp.obj
 GLTexture.exe: CMakeFiles/GLTexture.dir/Light.cpp.obj
+GLTexture.exe: CMakeFiles/GLTexture.dir/MVP.cpp.obj
 GLTexture.exe: CMakeFiles/GLTexture.dir/Material.cpp.obj
 GLTexture.exe: CMakeFiles/GLTexture.dir/Mesh.cpp.obj
+GLTexture.exe: CMakeFiles/GLTexture.dir/Model.cpp.obj
+GLTexture.exe: CMakeFiles/GLTexture.dir/Shader.cpp.obj
+GLTexture.exe: CMakeFiles/GLTexture.dir/VertexData.cpp.obj
+GLTexture.exe: CMakeFiles/GLTexture.dir/_Texture.cpp.obj
+GLTexture.exe: CMakeFiles/GLTexture.dir/main.cpp.obj
+GLTexture.exe: CMakeFiles/GLTexture.dir/glad.c.obj
 GLTexture.exe: CMakeFiles/GLTexture.dir/build.make
 GLTexture.exe: CMakeFiles/GLTexture.dir/linklibs.rsp
 GLTexture.exe: CMakeFiles/GLTexture.dir/objects1.rsp

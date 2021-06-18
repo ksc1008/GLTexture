@@ -4,15 +4,13 @@
 #include "Camera.h"
 #include "math.h"
 #include "header/mainheader.h"
-#include "header/Shader.h"
-#include "header/stb_image.h"
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 #include "glm/gtc/type_ptr.hpp"
-#include "header/OBJ_Loader.h"
 
 #include "header/Material.h"
 #include "header/MVP.h"
+
 bool firstMouse = true;
 double lastX = WIN_WIDTH;
 double lastY = WIN_HEIGHT;
@@ -20,15 +18,17 @@ double lastY = WIN_HEIGHT;
 int id;
 GLFWwindow* window;
 float green;
-Shader* TextureShader = nullptr;
-Shader* MainShader = nullptr;
-Shader* LightShader = nullptr;
+Shader* TextureShader;
+Shader* MainShader;
+Shader* LightShader;
+Shader* ModelShader;
+Model* backpack;
 float Rot=0;
 double deltaTime = 0;
-double currentFrame = glfwGetTime();
-double lastFrame = glfwGetTime();
+double currentFrame;
+double lastFrame;
 
-Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
+Camera camera;
 MVP* mvp;
 MVP* mvpLight;
 
@@ -41,9 +41,9 @@ Light* PointLight1;
 Light* PointLight2;
 Light* DirectionalLight;
 
-double lightX = 0.5;
-double lightY = 0.5;
-double lightZ = -2;
+double lightX;
+double lightY;
+double lightZ;
 
 void MainDisplay(){
     //double timeValue = glfwGetTime()*2;
@@ -136,6 +136,20 @@ void MainDisplay(){
     glDrawArrays(GL_TRIANGLES,0,36);
     glBindVertexArray(0);
 
+    ModelShader->use();
+
+    mvp->SetModel(glm::translate(mvp->GetModelMat(),glm::vec3(1,0,0)));
+    mvp->SetVertexShaderTransform(ModelShader->ID);
+    ModelShader->setVec3("viewPos",camera.Position);
+    ModelShader->setInt("directionalNum",ModelShader->DirectionalNum);
+    ModelShader->setFloat("material.shininess",32.0);
+    ModelShader->setInt("pointNum",ModelShader->PointNum);
+    ModelShader->setInt("spotNum",ModelShader->SpotNum);
+    FlashLight->ApplyToShader(*ModelShader);
+    PointLight0->ApplyToShader(*ModelShader);
+    PointLight1->ApplyToShader(*ModelShader);
+    backpack->Draw(*ModelShader);
+
     glfwSwapBuffers(window);
     glfwPollEvents();
 }
@@ -195,9 +209,16 @@ void framebuffer_size_callback(GLFWwindow* _window, int width, int height)
 
 
 int main(int argc, char**argv) {
+
+   lightX = 0.5;
+   lightY = 0.5;
+   lightZ = -2;
+    currentFrame = glfwGetTime();
+    lastFrame = glfwGetTime();
+    camera = Camera(glm::vec3(0.0f, 0.0f, 3.0f));
     mvp = new MVP();
     mvpLight = new MVP();
-    stbi__vertically_flip_on_load =true;
+    //stbi__vertically_flip_on_load =true;
     InitGlfw();
     window = glfwCreateWindow(WIN_WIDTH,WIN_HEIGHT,"HAHA",nullptr,nullptr);
     if(window == nullptr){
@@ -237,9 +258,7 @@ int main(int argc, char**argv) {
     containerMat->SetSpecularMap(1);
     containerMat->SetShininess(25.6f);
 
-    MainShader->setInt("directionalNum",MainShader->DirectionalNum);
-    MainShader->setInt("pointNum",MainShader->PointNum);
-    MainShader->setInt("spotNum",MainShader->SpotNum);
+    backpack = new Model("models/backpack.obj");
 
     while(!glfwWindowShouldClose(window))
     {

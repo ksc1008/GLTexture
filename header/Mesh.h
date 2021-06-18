@@ -6,6 +6,7 @@
 #include <string>
 #include <vector>
 #include "Shader.h"
+#include <map>
 
 enum textureType{
     SPECULAR, DIFFUSE
@@ -21,6 +22,7 @@ struct Vertex{
 struct Texture{
     unsigned int id;
     textureType type;
+    std::string path;
 };
 
 class Mesh {

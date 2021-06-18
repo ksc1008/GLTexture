@@ -124,14 +124,10 @@ vec3 CalculatePointLight(PointLight light, vec3 normal, vec3 viewDir){
 
 void main()
 {
-    diffuseColor = texture(material.diffuse[0],TexCoords);
-    specularColor = texture(material.specular[0],TexCoords);
-    for(int i = 1;i<diffuseMapNum;i++){
-        diffuseColor = mix(diffuseColor,texture(material.diffuse[i],TexCoords),1/(i+1));
-    }
-    for(int i = 1;i<specularMapNum;i++){
-        specularColor = mix(specularColor,texture(material.specular[i],TexCoords),1/(i+1));
-    }
+    //diffuseColor = vec3(1);
+    diffuseColor = vec3(texture(material.diffuse[0],TexCoords));
+    //specularColor = vec3(1);
+    specularColor = vec3(texture(material.specular[0],TexCoords));
 
     vec3 norm = normalize(NormalSmooth);
     vec3 result = vec3(0);
@@ -147,7 +143,6 @@ void main()
         result += CalculateSpotLight(spotLights[i],norm,viewDir);
     }
 
-    result *= objectColor;
 
     FragColor = vec4(result,1.0);
 }
