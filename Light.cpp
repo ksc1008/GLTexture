@@ -1,6 +1,5 @@
 #include "header/Light.h"
 #include <string>
-
 const char* GetParam(LightType type, std::string str, int ID){
     std::string s;
     switch(type){
@@ -99,4 +98,17 @@ void Light::ChangeAttenuation(Shader& shader, float _constant, float _linear, fl
 void Light::ChangeCutOff(Shader& shader, float _outerCutOff, float _cutOff) {
     shader.setFloat(GetParam(type,"position",_id),_cutOff);
     cutOff = _cutOff;
+}
+
+void Light::Draw(Shader &shader, unsigned int VAO, MVP& mvp) {
+    if(type!=POINT)
+        return;
+    glBindVertexArray(VAO);
+    glm::mat4 model = glm::translate(glm::mat4(1),position);
+    model = glm::scale(model,glm::vec3(.2));
+    shader.setVec3("Color",modelColor);
+    mvp.SetModel(model);
+    mvp.SetVertexShaderTransform(shader.ID);
+    glDrawArrays(GL_TRIANGLES,0,36);
+    glBindVertexArray(0);
 }

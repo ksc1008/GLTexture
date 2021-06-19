@@ -15,10 +15,7 @@ bool firstMouse = true;
 double lastX = WIN_WIDTH;
 double lastY = WIN_HEIGHT;
 
-int id;
 GLFWwindow* window;
-float green;
-Shader* TextureShader;
 Shader* MainShader;
 Shader* LightShader;
 Shader* ModelShader;
@@ -35,11 +32,7 @@ MVP* mvpLight;
 Material* containerMat;
 Material* sphereMat;
 
-Light* FlashLight;
-Light* PointLight0;
-Light* PointLight1;
-Light* PointLight2;
-Light* DirectionalLight;
+std::vector<Light>Lights;
 
 double lightX;
 double lightY;
@@ -48,6 +41,7 @@ double lightZ;
 void MainDisplay(){
     //double timeValue = glfwGetTime()*2;
     MainShader->use();
+    MainShader->setVec3("objectColor",1,1,1);
 
     glm::vec3 lightPos(lightX, lightY, lightZ);
 
@@ -60,24 +54,26 @@ void MainDisplay(){
     glClearColor(.2f,0,0,1);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    FlashLight->direction = camera.Front;
-    FlashLight->position = camera.Position;
-    FlashLight->ApplyToShader(*MainShader);
-    PointLight0->ApplyToShader(*MainShader);
-    PointLight1->ApplyToShader(*MainShader);
 
+    Lights[0].direction = camera.Front;
+    Lights[0].position = camera.Position;
+    for(int i = 0;i<Lights.size();i++) {
+        Lights[i].ApplyToShader(*MainShader);
+    }
+    /*###############################################
+      ##################Light Setting################
+      ###############################################*/
     MainShader->setInt("directionalNum",MainShader->DirectionalNum);
     MainShader->setInt("pointNum",MainShader->PointNum);
     MainShader->setInt("spotNum",MainShader->SpotNum);
-    MainShader->setVec3("objectColor",1,1,1);
-
-    containerMat->ApplyToShader(*MainShader);
-
     MainShader->setVec3("viewPos",camera.Position);
 
-    //Cube Bind
+    /*###############################################
+      ###################Container###################
+      ###############################################*/
+
     glBindVertexArray(cubeBufferObject);
-    //텍스처 할당
+    containerMat->ApplyToShader(*MainShader);
     glActiveTexture(GL_TEXTURE0);
     texture2.Bind();
     glActiveTexture(GL_TEXTURE1);
@@ -85,70 +81,60 @@ void MainDisplay(){
     glDrawArrays(GL_TRIANGLES,0,36);
     glBindVertexArray(0);
 
+    /*###############################################
+      #####################Floor#####################
+      ###############################################*/
+
     glBindVertexArray(cubeBufferObject);
     glm::mat4 model = glm::mat4(1);
     model = glm::translate(model,glm::vec3(0,-.55,0));
     model = glm::scale(model,glm::vec3(5,.1,5));
     mvp->SetModel(model);
     mvp->SetVertexShaderTransform(MainShader->ID);
-
     glActiveTexture(GL_TEXTURE0);
     texture0.Bind();
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D,0);
-
     glDrawArrays(GL_TRIANGLES,0,36);
     glBindVertexArray(0);
-    glBindVertexArray(cubeBufferObject);
 
+    /*###############################################
+      ####################Sphere#####################
+      ###############################################*/
 
     model = glm::mat4(1);
-    model = glm::translate(model,glm::vec3(1,.3,.3));
-    model = glm::scale(model,glm::vec3(.4));
+    model = glm::translate(model,glm::vec3(1,.3,-1.3));
+    model = glm::scale(model,glm::vec3(.5));
     mvp->SetModel(model);
-
     mvp->SetVertexShaderTransform(MainShader->ID);
-
     sphereMat->ApplyToShader(*MainShader);
-
     glBindVertexArray(sphereVAO);
     glDrawArrays(GL_TRIANGLES,0,vertNum);
     glBindVertexArray(0);
 
-    glm::mat4 trans = glm::identity<glm::mat4>();
-    trans = glm::translate(trans,lightPos);
-    trans = glm::scale(trans,glm::vec3(.2));
-    mvpLight->SetModel(trans);
-    LightShader->use();
-
-    LightShader->setVec3("Color",1,0,0);
-    mvpLight->SetVertexShaderTransform(LightShader->ID);
-
-    glBindVertexArray(lightSourceVAO);
-    glDrawArrays(GL_TRIANGLES,0,36);
-
-    LightShader->setVec3("Color",0,0,1);
-    model = glm::mat4(1);
-    model = glm::translate(model,glm::vec3(.5,.5,2));
-    model = glm::scale(model,glm::vec3(.2));
-    mvpLight->SetModel(model);
-    mvpLight->SetVertexShaderTransform(LightShader->ID);
-    glDrawArrays(GL_TRIANGLES,0,36);
-    glBindVertexArray(0);
-
     ModelShader->use();
 
-    mvp->SetModel(glm::translate(mvp->GetModelMat(),glm::vec3(1,0,0)));
+    for(int i = 0;i<Lights.size();i++) {
+        Lights[i].ApplyToShader(*ModelShader);
+    }
+
+    model = glm::mat4(1);
+    model = glm::translate(model,glm::vec3(1.2,.3,0));
+    model = glm::scale(model,glm::vec3(.3));
+
+    mvp->SetModel(model);
     mvp->SetVertexShaderTransform(ModelShader->ID);
     ModelShader->setVec3("viewPos",camera.Position);
     ModelShader->setInt("directionalNum",ModelShader->DirectionalNum);
     ModelShader->setFloat("material.shininess",32.0);
     ModelShader->setInt("pointNum",ModelShader->PointNum);
     ModelShader->setInt("spotNum",ModelShader->SpotNum);
-    FlashLight->ApplyToShader(*ModelShader);
-    PointLight0->ApplyToShader(*ModelShader);
-    PointLight1->ApplyToShader(*ModelShader);
     backpack->Draw(*ModelShader);
+
+    LightShader->use();
+    for(int i = 0;i<Lights.size();i++){
+        Lights[i].Draw(*LightShader,lightSourceVAO,*mvp);
+    }
 
     glfwSwapBuffers(window);
     glfwPollEvents();
@@ -167,20 +153,6 @@ void processInput(GLFWwindow *_window)
         camera.ProcessKeyboard(LEFT, deltaTime);
     if (glfwGetKey(_window, GLFW_KEY_D) == GLFW_PRESS)
         camera.ProcessKeyboard(RIGHT, deltaTime);
-
-
-    if (glfwGetKey(_window, GLFW_KEY_K) == GLFW_PRESS)
-        lightX-=deltaTime;
-    if (glfwGetKey(_window, GLFW_KEY_U) == GLFW_PRESS)
-        lightZ+=deltaTime;
-    if (glfwGetKey(_window, GLFW_KEY_J) == GLFW_PRESS)
-        lightZ-=deltaTime;
-    if (glfwGetKey(_window, GLFW_KEY_H) == GLFW_PRESS)
-        lightX+=deltaTime;
-    if (glfwGetKey(_window, GLFW_KEY_Y) == GLFW_PRESS)
-        lightY+=deltaTime;
-    if (glfwGetKey(_window, GLFW_KEY_I) == GLFW_PRESS)
-        lightY-=deltaTime;
 }
 
 // -------------------------------------------------------
@@ -209,10 +181,6 @@ void framebuffer_size_callback(GLFWwindow* _window, int width, int height)
 
 
 int main(int argc, char**argv) {
-
-   lightX = 0.5;
-   lightY = 0.5;
-   lightZ = -2;
     currentFrame = glfwGetTime();
     lastFrame = glfwGetTime();
     camera = Camera(glm::vec3(0.0f, 0.0f, 3.0f));
@@ -244,8 +212,6 @@ int main(int argc, char**argv) {
     mvpLight->SetPerspective(glm::radians(45.0f),16.0f/9.0f,0.1f,100.0f);
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
     glm::mat4 view = glm::mat4(1.0f);
-    view = glm::translate(view,glm::vec3(0.0f,0.0f,-3.0f));
-    mvp->SetView(view);
 
     sphereMat = new Material();
     containerMat = new Material();
@@ -266,7 +232,7 @@ int main(int argc, char**argv) {
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
         processInput(window);
-        InputEvent( window);
+        InputEvent(window);
         MainDisplay();
     }
     glfwTerminate();

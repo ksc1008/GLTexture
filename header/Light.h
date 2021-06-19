@@ -3,6 +3,7 @@
 
 #include "../glm/glm.hpp"
 #include "Shader.h"
+#include "mvp.h"
 
 enum LightType {SPOT, POINT, DIRECTIONAL};
 
@@ -22,10 +23,13 @@ public :
     glm::vec3 diffuse;
     glm::vec3 specular;
 
+    glm::vec3 modelColor;
+
     float constant;
     float linear;
     float quadratic;
 
+    void Draw(Shader& shader, unsigned int VAO,MVP& mvp);
     void ApplyToShader(Shader& shader);
     void AddToShader(Shader* shader);
 

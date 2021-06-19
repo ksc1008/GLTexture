@@ -13,7 +13,7 @@ unsigned int sphereBufferArray;
 unsigned int sphereVAO;
 
 int vertNum;
-int width, height, nrChannels;
+int width, height;
 
 float* SphereVertices;
 
@@ -26,49 +26,60 @@ void InitTexture(){
 
 void InitShader(){
     MainShader = new Shader("shaders/4.vShaderMultipleLights.glsl","shaders/4.fShaderMultipleLights.glsl");
-    TextureShader = new Shader("shaders/3.vShaderFlashLight.glsl","shaders/3.fShaderFlashLight.glsl");
     LightShader = new Shader("shaders/vLightingShader.glsl","shaders/fLightSourceShader.glsl");
     ModelShader = new Shader("shaders/5.vShaderWithMesh.glsl","shaders/5.fShaderWithMesh.glsl");
 }
 
 void InitLights(){
-    FlashLight = new Light();
+    Lights.push_back(Light());
+    Lights.push_back(Light());
+    Lights.push_back(Light());
+    Lights.push_back(Light());
 
-    FlashLight->type = SPOT;
-    FlashLight->constant = 1.0;
-    FlashLight->linear = 0.14;
-    FlashLight->quadratic = 0.07;
-    FlashLight->ambient = glm::vec3(.1f,.1f,.1f);
-    FlashLight->specular = glm::vec3(1.0f,1.0f,1.0f);
-    FlashLight->diffuse = glm::vec3(1,1,1);
-    FlashLight->cutOff = glm::cos(glm::radians(12.5f));
-    FlashLight->outerCutOff = glm::cos(glm::radians(17.5f));
+    Lights[0].type = SPOT;
+    Lights[0].constant = 1.0;
+    Lights[0].linear = 0.14;
+    Lights[0].quadratic = 0.07;
+    Lights[0].ambient = glm::vec3(.1f,.1f,.1f);
+    Lights[0].specular = glm::vec3(1.0f,1.0f,1.0f);
+    Lights[0].diffuse = glm::vec3(1,1,1);
+    Lights[0].cutOff = glm::cos(glm::radians(12.5f));
+    Lights[0].outerCutOff = glm::cos(glm::radians(17.5f));
 
-    PointLight0 = new Light();
-    PointLight0->type = POINT;
-    PointLight0->constant = 1.0;
-    PointLight0->linear = 0.14;
-    PointLight0->quadratic = 0.07;
-    PointLight0->ambient = glm::vec3(.1f,.0f,.0f);
-    PointLight0->specular = glm::vec3(1.0f,.0,0);
-    PointLight0->diffuse = glm::vec3(1,0,0);
-    PointLight0->position = glm::vec3(0.5,0.5,-2);
+    Lights[1].type = POINT;
+    Lights[1].constant = 1.0;
+    Lights[1].linear = 0.14;
+    Lights[1].quadratic = 0.07;
+    Lights[1].ambient = glm::vec3(.1f,.0f,.0f);
+    Lights[1].specular = glm::vec3(1.0f,.0,0);
+    Lights[1].diffuse = glm::vec3(1,0,0);
+    Lights[1].position = glm::vec3(0.5,0.5,-2);
+    Lights[1].modelColor = glm::vec3(1,0,0);
 
-    PointLight1 = new Light();
-    PointLight1->type = POINT;
-    PointLight1->constant = 1.0;
-    PointLight1->linear = 0.14;
-    PointLight1->quadratic = 0.07;
-    PointLight1->ambient = glm::vec3(0,0,0.1f);
-    PointLight1->specular = glm::vec3(0,0,1);
-    PointLight1->diffuse = glm::vec3(0,0,1);
-    PointLight1->position = glm::vec3(0.5,0.5,2);
-    FlashLight->AddToShader(MainShader);
-    FlashLight->AddToShader(ModelShader);
-    PointLight0->AddToShader(MainShader);
-    PointLight0->AddToShader(ModelShader);
-    PointLight1->AddToShader(MainShader);
-    PointLight1->AddToShader(ModelShader);
+    Lights[2].type = POINT;
+    Lights[2].constant = 1.0;
+    Lights[2].linear = 0.14;
+    Lights[2].quadratic = 0.07;
+    Lights[2].ambient = glm::vec3(0,0,0.1f);
+    Lights[2].specular = glm::vec3(0,0,1);
+    Lights[2].diffuse = glm::vec3(0,0,1);
+    Lights[2].position = glm::vec3(0.5,0.5,2);
+    Lights[2].modelColor = glm::vec3(0,0,1);
+
+    Lights[3].type = POINT;
+    Lights[3].constant = 1.0;
+    Lights[3].linear = 0.07;
+    Lights[3].quadratic = 0.017;
+    Lights[3].ambient = glm::vec3(0.2,0.2,0);
+    Lights[3].specular = glm::vec3(1,1,.8);
+    Lights[3].diffuse = glm::vec3(1,1,.8);
+    Lights[3].position = glm::vec3(2.5,0.5,0);
+    Lights[3].modelColor = glm::vec3(1,1,.8);
+
+    for(int i = 0;i<Lights.size();i++){
+        Lights[i].AddToShader(MainShader);
+        Lights[i].AddToShader(ModelShader);
+    }
 }
 
 void InitObject(){

@@ -65,6 +65,8 @@ CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/detail/type_vec4.hpp
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/detail/type_vec4.inl
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/detail/type_vec4_simd.inl
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/exponential.hpp
+CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/ext/matrix_clip_space.hpp
+CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/ext/matrix_clip_space.inl
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/ext/matrix_double2x2.hpp
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/ext/matrix_double2x2_precision.hpp
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/ext/matrix_double2x3.hpp
@@ -101,6 +103,11 @@ CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/ext/matrix_float4x3.hpp
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/ext/matrix_float4x3_precision.hpp
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/ext/matrix_float4x4.hpp
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/ext/matrix_float4x4_precision.hpp
+CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/ext/matrix_projection.hpp
+CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/ext/matrix_projection.inl
+CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/ext/matrix_transform.hpp
+CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/ext/scalar_constants.hpp
+CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/ext/scalar_constants.inl
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/ext/scalar_int_sized.hpp
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/ext/scalar_uint_sized.hpp
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/ext/vector_bool2.hpp
@@ -136,6 +143,10 @@ CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/ext/vector_uint4_sized.hpp
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/fwd.hpp
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/geometric.hpp
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/glm.hpp
+CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/gtc/constants.hpp
+CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/gtc/constants.inl
+CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/gtc/matrix_transform.hpp
+CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/gtc/matrix_transform.inl
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/integer.hpp
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/mat2x2.hpp
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/mat2x3.hpp
@@ -161,6 +172,7 @@ CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/vec3.hpp
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/vec4.hpp
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../glm/vector_relational.hpp
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../header/Light.h
+CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../header/MVP.h
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../header/Mesh.h
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../header/Model.h
 CMakeFiles/GLTexture.dir/CreateSphere.cpp.obj: ../header/OBJ_Loader.h
@@ -229,6 +241,8 @@ CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/detail/type_vec4.hpp
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/detail/type_vec4.inl
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/detail/type_vec4_simd.inl
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/exponential.hpp
+CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/ext/matrix_clip_space.hpp
+CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/ext/matrix_clip_space.inl
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/ext/matrix_double2x2.hpp
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/ext/matrix_double2x2_precision.hpp
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/ext/matrix_double2x3.hpp
@@ -265,6 +279,11 @@ CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/ext/matrix_float4x3.hpp
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/ext/matrix_float4x3_precision.hpp
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/ext/matrix_float4x4.hpp
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/ext/matrix_float4x4_precision.hpp
+CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/ext/matrix_projection.hpp
+CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/ext/matrix_projection.inl
+CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/ext/matrix_transform.hpp
+CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/ext/scalar_constants.hpp
+CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/ext/scalar_constants.inl
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/ext/scalar_int_sized.hpp
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/ext/scalar_uint_sized.hpp
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/ext/vector_bool2.hpp
@@ -300,6 +319,10 @@ CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/ext/vector_uint4_sized.hpp
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/fwd.hpp
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/geometric.hpp
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/glm.hpp
+CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/gtc/constants.hpp
+CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/gtc/constants.inl
+CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/gtc/matrix_transform.hpp
+CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/gtc/matrix_transform.inl
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/integer.hpp
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/mat2x2.hpp
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/mat2x3.hpp
@@ -325,6 +348,7 @@ CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/vec3.hpp
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/vec4.hpp
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../glm/vector_relational.hpp
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../header/Light.h
+CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../header/MVP.h
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../header/Mesh.h
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../header/Model.h
 CMakeFiles/GLTexture.dir/Initiation.cpp.obj: ../header/OBJ_Loader.h
@@ -393,6 +417,8 @@ CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/detail/type_vec4.hpp
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/detail/type_vec4.inl
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/detail/type_vec4_simd.inl
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/exponential.hpp
+CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/ext/matrix_clip_space.hpp
+CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/ext/matrix_clip_space.inl
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/ext/matrix_double2x2.hpp
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/ext/matrix_double2x2_precision.hpp
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/ext/matrix_double2x3.hpp
@@ -429,6 +455,11 @@ CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/ext/matrix_float4x3.hpp
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/ext/matrix_float4x3_precision.hpp
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/ext/matrix_float4x4.hpp
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/ext/matrix_float4x4_precision.hpp
+CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/ext/matrix_projection.hpp
+CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/ext/matrix_projection.inl
+CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/ext/matrix_transform.hpp
+CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/ext/scalar_constants.hpp
+CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/ext/scalar_constants.inl
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/ext/scalar_int_sized.hpp
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/ext/scalar_uint_sized.hpp
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/ext/vector_bool2.hpp
@@ -464,6 +495,10 @@ CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/ext/vector_uint4_sized.hpp
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/fwd.hpp
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/geometric.hpp
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/glm.hpp
+CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/gtc/constants.hpp
+CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/gtc/constants.inl
+CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/gtc/matrix_transform.hpp
+CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/gtc/matrix_transform.inl
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/integer.hpp
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/mat2x2.hpp
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/mat2x3.hpp
@@ -489,6 +524,7 @@ CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/vec3.hpp
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/vec4.hpp
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../glm/vector_relational.hpp
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../header/Light.h
+CMakeFiles/GLTexture.dir/Input.cpp.obj: ../header/MVP.h
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../header/Mesh.h
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../header/Model.h
 CMakeFiles/GLTexture.dir/Input.cpp.obj: ../header/OBJ_Loader.h
@@ -557,6 +593,8 @@ CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/detail/type_vec4.hpp
 CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/detail/type_vec4.inl
 CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/detail/type_vec4_simd.inl
 CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/exponential.hpp
+CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/ext/matrix_clip_space.hpp
+CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/ext/matrix_clip_space.inl
 CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/ext/matrix_double2x2.hpp
 CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/ext/matrix_double2x2_precision.hpp
 CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/ext/matrix_double2x3.hpp
@@ -593,6 +631,11 @@ CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/ext/matrix_float4x3.hpp
 CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/ext/matrix_float4x3_precision.hpp
 CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/ext/matrix_float4x4.hpp
 CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/ext/matrix_float4x4_precision.hpp
+CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/ext/matrix_projection.hpp
+CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/ext/matrix_projection.inl
+CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/ext/matrix_transform.hpp
+CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/ext/scalar_constants.hpp
+CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/ext/scalar_constants.inl
 CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/ext/scalar_int_sized.hpp
 CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/ext/scalar_uint_sized.hpp
 CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/ext/vector_bool2.hpp
@@ -628,6 +671,10 @@ CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/ext/vector_uint4_sized.hpp
 CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/fwd.hpp
 CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/geometric.hpp
 CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/glm.hpp
+CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/gtc/constants.hpp
+CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/gtc/constants.inl
+CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/gtc/matrix_transform.hpp
+CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/gtc/matrix_transform.inl
 CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/integer.hpp
 CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/mat2x2.hpp
 CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/mat2x3.hpp
@@ -653,6 +700,7 @@ CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/vec3.hpp
 CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/vec4.hpp
 CMakeFiles/GLTexture.dir/Light.cpp.obj: ../glm/vector_relational.hpp
 CMakeFiles/GLTexture.dir/Light.cpp.obj: ../header/Light.h
+CMakeFiles/GLTexture.dir/Light.cpp.obj: ../header/MVP.h
 CMakeFiles/GLTexture.dir/Light.cpp.obj: ../header/Shader.h
 
 CMakeFiles/GLTexture.dir/MVP.cpp.obj: ../include/KHR/khrplatform.h
@@ -1605,6 +1653,8 @@ CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/detail/type_vec4.hpp
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/detail/type_vec4.inl
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/detail/type_vec4_simd.inl
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/exponential.hpp
+CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/ext/matrix_clip_space.hpp
+CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/ext/matrix_clip_space.inl
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/ext/matrix_double2x2.hpp
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/ext/matrix_double2x2_precision.hpp
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/ext/matrix_double2x3.hpp
@@ -1641,6 +1691,11 @@ CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/ext/matrix_float4x3.hpp
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/ext/matrix_float4x3_precision.hpp
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/ext/matrix_float4x4.hpp
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/ext/matrix_float4x4_precision.hpp
+CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/ext/matrix_projection.hpp
+CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/ext/matrix_projection.inl
+CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/ext/matrix_transform.hpp
+CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/ext/scalar_constants.hpp
+CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/ext/scalar_constants.inl
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/ext/scalar_int_sized.hpp
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/ext/scalar_uint_sized.hpp
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/ext/vector_bool2.hpp
@@ -1676,6 +1731,10 @@ CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/ext/vector_uint4_sized.hpp
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/fwd.hpp
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/geometric.hpp
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/glm.hpp
+CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/gtc/constants.hpp
+CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/gtc/constants.inl
+CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/gtc/matrix_transform.hpp
+CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/gtc/matrix_transform.inl
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/integer.hpp
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/mat2x2.hpp
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/mat2x3.hpp
@@ -1701,6 +1760,7 @@ CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/vec3.hpp
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/vec4.hpp
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../glm/vector_relational.hpp
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../header/Light.h
+CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../header/MVP.h
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../header/Mesh.h
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../header/Model.h
 CMakeFiles/GLTexture.dir/VertexData.cpp.obj: ../header/OBJ_Loader.h
