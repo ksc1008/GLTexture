@@ -1,0 +1,7 @@
+C:/VS/GL/out/build/x64-Debug/CMakeFiles/GL.dir
+C:/VS/GL/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+C:/VS/GL/out/build/x64-Debug/CMakeFiles/test.dir
+C:/VS/GL/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/VS/GL/out/build/x64-Debug/glm/CMakeFiles/rebuild_cache.dir
+C:/VS/GL/out/build/x64-Debug/glm/CMakeFiles/test.dir
+C:/VS/GL/out/build/x64-Debug/glm/CMakeFiles/edit_cache.dir

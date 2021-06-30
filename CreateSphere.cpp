@@ -1,6 +1,9 @@
 #include <vector>
 #include "header/mainheader.h"
 #include "glm/glm.hpp"
+#define _USE_MATH_DEFINES
+#include <math.h>
+
 
 int oldindex = -1;
 int newindex = -1;
@@ -59,7 +62,7 @@ float* CreateSphereWithNormal(int stack, int slice, float radius,int* vertexNum)
     for(int i = 1;i<stack;i++){
         _z = radius-(2*radius)/stack*i;
         _r = sqrt(radius*radius-_z*_z);
-        float theta = M_PI*2/slice;
+        float theta = M_PI * 2 / slice;
         for(int s = 0;s<slice;s++){
             _x = cos(theta*s)*_r;
             _y = sin(theta*s)*_r;
