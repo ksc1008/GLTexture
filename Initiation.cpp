@@ -1,10 +1,11 @@
 #include "header/mainheader.h"
 #include "header/_Texture.h"
+#include "header/constants.h"
 
-_Texture texture0 = _Texture("textures/Dirt.png");
-_Texture texture1 = _Texture("textures/awesomeface.png", GL_RGBA);
-_Texture texture2 = _Texture("textures/container2.png", GL_RGBA);
-_Texture texture3 = _Texture("textures/container2_specular.png", GL_RGBA);
+_Texture texture0 = _Texture(TEXTURE_PATH+"Dirt.png");
+_Texture texture1 = _Texture(TEXTURE_PATH+"awesomeface.png", GL_RGBA);
+_Texture texture2 = _Texture(TEXTURE_PATH+"container2.png", GL_RGBA);
+_Texture texture3 = _Texture(TEXTURE_PATH+"container2_specular.png", GL_RGBA);
 
 unsigned int cubeBufferArray;
 unsigned int cubeBufferObject;
@@ -25,9 +26,9 @@ void InitTexture(){
 }
 
 void InitShader(){
-    MainShader = new Shader("shaders/4.vShaderMultipleLights.glsl","shaders/4.fShaderMultipleLights.glsl");
-    LightShader = new Shader("shaders/vLightingShader.glsl","shaders/fLightSourceShader.glsl");
-    ModelShader = new Shader("shaders/5.vShaderWithMesh.glsl","shaders/5.fShaderWithMesh.glsl");
+    MainShader = new Shader(SHADER_PATH+"4.vShaderMultipleLights.glsl",SHADER_PATH+"4.fShaderMultipleLights.glsl");
+    LightShader = new Shader(SHADER_PATH+"vLightingShader.glsl",SHADER_PATH+"fLightSourceShader.glsl");
+    ModelShader = new Shader(SHADER_PATH+"5.vShaderWithMesh.glsl",SHADER_PATH+"5.fShaderWithMesh.glsl");
 }
 
 void InitLights(){
@@ -83,6 +84,9 @@ void InitLights(){
 }
 
 void InitObject(){
+
+    backpack = new Model(MODEL_PATH+"backpack.obj");
+
     SphereVertices = CreateSphereWithNormal(50,50,.5,&vertNum);
     glGenBuffers(1,&cubeBufferArray);
     glGenBuffers(1,&sphereBufferArray);

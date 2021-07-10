@@ -1,0 +1,7 @@
+C:/GLTexture/build/CMakeFiles/GLTexture.dir
+C:/GLTexture/build/CMakeFiles/rebuild_cache.dir
+C:/GLTexture/build/CMakeFiles/test.dir
+C:/GLTexture/build/CMakeFiles/edit_cache.dir
+C:/GLTexture/build/glm/CMakeFiles/rebuild_cache.dir
+C:/GLTexture/build/glm/CMakeFiles/test.dir
+C:/GLTexture/build/glm/CMakeFiles/edit_cache.dir

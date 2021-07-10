@@ -117,20 +117,20 @@ Mesh Model::processMesh(objl::Mesh* mesh, std::map<std::string,unsigned int>& mo
 
     if(!mesh->MeshMaterial.map_Kd.empty()){
         if(!modelTextures.count(mesh->MeshMaterial.map_Kd)){
-            textures.push_back(TextureFromMaterial("models/"+mesh->MeshMaterial.map_Kd,DIFFUSE));
+            textures.push_back(TextureFromMaterial("../models/"+mesh->MeshMaterial.map_Kd,DIFFUSE));
             modelTextures[mesh->MeshMaterial.map_Kd] = textures.back().id;
         }
         else{
-            textures.push_back(TextureLoaded("models/"+mesh->MeshMaterial.map_Kd,DIFFUSE,modelTextures[mesh->MeshMaterial.map_Kd]));
+            textures.push_back(TextureLoaded("../models/"+mesh->MeshMaterial.map_Kd,DIFFUSE,modelTextures[mesh->MeshMaterial.map_Kd]));
         }
     }
     if(!mesh->MeshMaterial.map_Ks.empty()){
         if(!modelTextures.count(mesh->MeshMaterial.map_Ks)){
-            textures.push_back(TextureFromMaterial("models/"+mesh->MeshMaterial.map_Ks,SPECULAR));
+            textures.push_back(TextureFromMaterial("../models/"+mesh->MeshMaterial.map_Ks,SPECULAR));
             modelTextures[mesh->MeshMaterial.map_Ks] = textures.back().id;
         }
         else{
-            textures.push_back(TextureLoaded("models/"+mesh->MeshMaterial.map_Ks,SPECULAR,modelTextures[mesh->MeshMaterial.map_Ks]));
+            textures.push_back(TextureLoaded("../models/"+mesh->MeshMaterial.map_Ks,SPECULAR,modelTextures[mesh->MeshMaterial.map_Ks]));
         }
     }
 

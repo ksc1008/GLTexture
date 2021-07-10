@@ -9,6 +9,8 @@
 #include "Light.h"
 #include "Model.h"
 
+extern Model* backpack;
+
 void InitGlfw();
 extern _Texture texture0;
 extern _Texture texture2;

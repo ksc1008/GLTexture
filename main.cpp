@@ -224,7 +224,6 @@ int main(int argc, char**argv) {
     containerMat->SetSpecularMap(1);
     containerMat->SetShininess(25.6f);
 
-    backpack = new Model("models/backpack.obj");
 
     while(!glfwWindowShouldClose(window))
     {

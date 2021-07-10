@@ -1,0 +1,1 @@
+  -LC:/GLTexture/lib/x64  -LC:/GLTexture/lib  -Wl,-Bstatic -lopengl32 -lfreeglut -Wl,-Bdynamic -lglu32 -lglfw3 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

@@ -1,0 +1,67 @@
+[
+{
+  "directory": "C:/GLTexture/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/GLTexture.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\GLTexture.dir\\CreateSphere.cpp.obj -c C:\\GLTexture\\CreateSphere.cpp",
+  "file": "C:/GLTexture/CreateSphere.cpp"
+},
+{
+  "directory": "C:/GLTexture/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/GLTexture.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\GLTexture.dir\\Initiation.cpp.obj -c C:\\GLTexture\\Initiation.cpp",
+  "file": "C:/GLTexture/Initiation.cpp"
+},
+{
+  "directory": "C:/GLTexture/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/GLTexture.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\GLTexture.dir\\Input.cpp.obj -c C:\\GLTexture\\Input.cpp",
+  "file": "C:/GLTexture/Input.cpp"
+},
+{
+  "directory": "C:/GLTexture/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/GLTexture.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\GLTexture.dir\\Light.cpp.obj -c C:\\GLTexture\\Light.cpp",
+  "file": "C:/GLTexture/Light.cpp"
+},
+{
+  "directory": "C:/GLTexture/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/GLTexture.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\GLTexture.dir\\MVP.cpp.obj -c C:\\GLTexture\\MVP.cpp",
+  "file": "C:/GLTexture/MVP.cpp"
+},
+{
+  "directory": "C:/GLTexture/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/GLTexture.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\GLTexture.dir\\Material.cpp.obj -c C:\\GLTexture\\Material.cpp",
+  "file": "C:/GLTexture/Material.cpp"
+},
+{
+  "directory": "C:/GLTexture/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/GLTexture.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\GLTexture.dir\\Mesh.cpp.obj -c C:\\GLTexture\\Mesh.cpp",
+  "file": "C:/GLTexture/Mesh.cpp"
+},
+{
+  "directory": "C:/GLTexture/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/GLTexture.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\GLTexture.dir\\Model.cpp.obj -c C:\\GLTexture\\Model.cpp",
+  "file": "C:/GLTexture/Model.cpp"
+},
+{
+  "directory": "C:/GLTexture/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/GLTexture.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\GLTexture.dir\\Shader.cpp.obj -c C:\\GLTexture\\Shader.cpp",
+  "file": "C:/GLTexture/Shader.cpp"
+},
+{
+  "directory": "C:/GLTexture/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/GLTexture.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\GLTexture.dir\\VertexData.cpp.obj -c C:\\GLTexture\\VertexData.cpp",
+  "file": "C:/GLTexture/VertexData.cpp"
+},
+{
+  "directory": "C:/GLTexture/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/GLTexture.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\GLTexture.dir\\_Texture.cpp.obj -c C:\\GLTexture\\_Texture.cpp",
+  "file": "C:/GLTexture/_Texture.cpp"
+},
+{
+  "directory": "C:/GLTexture/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/GLTexture.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\GLTexture.dir\\main.cpp.obj -c C:\\GLTexture\\main.cpp",
+  "file": "C:/GLTexture/main.cpp"
+},
+{
+  "directory": "C:/GLTexture/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X8EAA8~1.EXE  @CMakeFiles/GLTexture.dir/includes_C.rsp -g -o CMakeFiles\\GLTexture.dir\\glad.c.obj -c C:\\GLTexture\\glad.c",
+  "file": "C:/GLTexture/glad.c"
+}
+]

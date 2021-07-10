@@ -155,6 +155,9 @@
 		<Unit filename="C:/GLTexture/header/_Texture.h">
 			<Option target="GLTexture"/>
 		</Unit>
+		<Unit filename="C:/GLTexture/header/constants.h">
+			<Option target="GLTexture"/>
+		</Unit>
 		<Unit filename="C:/GLTexture/header/mainheader.h">
 			<Option target="GLTexture"/>
 		</Unit>
